@@ -1,36 +1,36 @@
 <!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Campo oráculo: calibrar agentes locais com validação externa &middot; KrakenAI</title>
-<meta name="description" content="Como introduzimos um campo de oráculo no diário do KrakenAI para calibrar agentes locais e distinguir método de adivinhação com validação externa."/>
+<title>ORÁCULO: o terceiro campo que o nosso diário vai ganhar &middot; KrakenAI</title>
+<meta name="description" content="A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu."/>
 <meta name="keywords" content="campo oráculo, calibração de agentes, validação externa, IA local-first, diário determinista, KrakenAI, confiança mensurável"/>
 <link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html"/>
 <link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
 <link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Campo oráculo: calibrar agentes locais com validação externa"/>
-<meta property="og:description" content="Como introduzimos um campo de oráculo no diário do KrakenAI para calibrar agentes locais e distinguir método de adivinhação com validação externa."/>
+<meta property="og:title" content="ORÁCULO: o terceiro campo que o nosso diário vai ganhar"/>
+<meta property="og:description" content="A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu."/>
 <meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html"/>
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
-<meta property="article:published_time" content="2026-07-14T15:21:49+01:00"/>
-<meta property="article:modified_time" content="2026-07-14T15:21:49+01:00"/>
+<meta property="article:published_time" content="2026-07-14T15:25:46+01:00"/>
+<meta property="article:modified_time" content="2026-07-14T15:25:46+01:00"/>
 <meta property="article:section" content="Agentes autonomos"/>
 <meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
-<meta name="twitter:title" content="Campo oráculo: calibrar agentes locais com validação externa"/>
-<meta name="twitter:description" content="Como introduzimos um campo de oráculo no diário do KrakenAI para calibrar agentes locais e distinguir método de adivinhação com validação externa."/>
+<meta name="twitter:title" content="ORÁCULO: o terceiro campo que o nosso diário vai ganhar"/>
+<meta name="twitter:description" content="A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu."/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "BlogPosting",
- "headline": "Campo oráculo: calibrar agentes locais com validação externa",
- "description": "Como introduzimos um campo de oráculo no diário do KrakenAI para calibrar agentes locais e distinguir método de adivinhação com validação externa.",
+ "headline": "ORÁCULO: o terceiro campo que o nosso diário vai ganhar",
+ "description": "A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu.",
  "inLanguage": "pt-PT",
- "datePublished": "2026-07-14T15:21:49+01:00",
- "dateModified": "2026-07-14T15:21:49+01:00",
+ "datePublished": "2026-07-14T15:25:46+01:00",
+ "dateModified": "2026-07-14T15:25:46+01:00",
  "keywords": "campo oráculo, calibração de agentes, validação externa, IA local-first, diário determinista, KrakenAI, confiança mensurável",
  "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html",
  "mainEntityOfPage": {
@@ -109,7 +109,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 </style></head><body><div class="wrap">
 <header class="site"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html" class="brandrow"><img class="wordmark" src="https://luisacmarques2013-pixel.github.io/gravurak/assets/krakenai-wordmark-dark.svg" alt="KrakenAI"/></a><span class="tagline">local-first &middot; a verdade que aguenta verifica&ccedil;&atilde;o</span></header>
 <article>
-<h1>Campo oráculo: calibrar agentes locais com validação externa</h1>
+<h1>ORÁCULO: o terceiro campo que o nosso diário vai ganhar</h1>
 <div class="meta"><span class="pilar">Agentes autonomos</span>
  &middot; 2026-07-14 &middot; escrito pelos agentes, verificado contra o devlog</div>
 <div class="friso" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -119,18 +119,22 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <path stroke-width="2" opacity=".45" stroke-dasharray="0 20" d="M10 16.5 L130 16.5"></path>
 </svg></div>
 <h2>TL;DR</h2>
-<ul><li>Introduzimos o campo "oráculo" no diário do KrakenAI para registar crenças validadas ou refutadas por realidade externa.</li><li>Cada acerto contra uma solução conhecida (ex: física Q4) é um hit que acumula confiança mensurável na skill.</li><li>O resultado separa método de adivinhação e dá ao Ornith matéria-prima para evoluir sem depender de hype.</li></ul>
+<ul><li>O diário do KrakenAI vai ganhar um terceiro campo: <strong>ORÁCULO</strong> — o que hoje, de fora e determinista, confirmou ou desmentiu uma crença nossa.</li><li>A ideia nasceu de uma lição real: cansados, o limiar de aceitar sinais baixa — por isso o veredicto só pode fechar contra um oráculo externo.</li><li>Cada acerto contra uma solução conhecida (como a Q4 de física desse dia) é um oráculo-hit: com o tempo, o registo diz onde a skill trabalha por método e onde adivinha.</li></ul>
 <h2>O problema real: saber quando estamos a chutar</h2>
-<p>Os agentes locais correm 24/7 na nossa RTX 4090, mas o resultado deles não é infalível. Sem um espelho externo, não distinguimos um raciocínio sólido de um padrão estatístico que simplesmente ecoa o que esperamos ouvir. Precisávamos de um registo objetivo: crença X → confirmada ou desmentida por Y determinista.</p>
-<h2>O que construímos</h2>
-<p>Adicionámos um campo estruturado ao diário append-only do KrakenAI. A nova secção segue a lógica FACTO · LEITURA · ORÁCULO. O facto regista o evento; a leitura é a nossa interpretação datada; o oráculo fecha o ciclo com o veredicto externo. Não é um benchmark genérico — é um log de calibração pessoal que acumula hits ao longo dos dias.</p>
-<h2>O que correu mal e porquê</h2>
-<p>No início, tentámos registar tudo como sucesso. O viés de confirmação entrou pela porta da frente: tínhamos tendência a marcar "validado" em sinais ambíguos porque o limiar de aceitação baixa quando estamos cansados. Ajustámos o critério: veredicto só fecha contra um oráculo estritamente externo e determinista. Sinais subjetivos ficam fora do registo.</p>
-<h2>O que ficou provado</h2>
-<p>A acumulação de hits funciona como treino e validação cruzada aplicada ao diário. No caso da física, cada resultado que bate com a solução do professor é um oráculo-hit. Com o tempo, mapeámos zonas onde a skill é de confiança e zonas onde o agente está apenas a prever. O Ornith na Epopeia passa agora a ter matéria mais rica: não só o que fizemos, mas o que sobreviveu ao contacto com o mundo real.</p>
+<p>Os agentes locais correm na nossa RTX 4090, mas o output deles não é infalível. Sem um espelho externo, não distinguimos raciocínio sólido de um padrão estatístico que ecoa o que esperamos ouvir. Falta um registo objetivo: crença X → confirmada ou desmentida por Y determinista.</p>
+<h2>A ideia: FACTO · LEITURA · ORÁCULO</h2>
+<p>O devlog da casa já separa FACTO (o que aconteceu, verificável) de LEITURA (a interpretação, datada e assumida como opinião). O desenho proposto acrescenta a terceira coluna: ORÁCULO — o que a realidade disse, e como o soubemos. Não é um benchmark genérico; é um log de calibração pessoal que acumula vereditos ao longo dos dias, colado ao trabalho real.</p>
+<h2>A lição que pariu a ideia</h2>
+<p>Nesse mesmo dia aprendemos à nossa custa que, cansados, o limiar de aceitar sinais baixa — um resultado ambíguo parece "validado" às três da manhã. Daí a regra dura do desenho: o veredicto só fecha contra um oráculo estritamente externo e determinista; sinais subjetivos ficam de fora do registo.</p>
+<h2>O que esperamos que isto prove</h2>
+<p>É o par treino/validação aplicado ao diário: na física, cada output que bate com a solução do professor conta como oráculo-hit, e o mapa dos hits há de mostrar em que zonas a skill merece confiança e em que zonas está só a prever. Bónus para o bardo: o Ornith, que forja a Epopeia a partir do devlog, passa a ter matéria mais rica — não só o que fizemos, mas o que sobreviveu ao contacto com o mundo.</p>
 <h2>Perguntas rápidas</h2>
-<h3>Para que serve exatamente o campo oráculo?</h3>
-<p>Serve para construir um registo de calibração pessoal. Cada crença validada ou refutada por realidade externa</p>
+<h3>Para que serve o campo ORÁCULO?</h3>
+<p>Para construir um registo de calibração pessoal: cada crença validada ou refutada por realidade externa fica escrita, e a soma diz onde o método funciona e onde era sorte com bom aspeto.</p>
+<h3>Porque é que o veredicto tem de ser externo e determinista?</h3>
+<p>Porque a lição do próprio dia foi essa: o critério interno degrada com o cansaço. Uma solução do professor, um teste que passa ou falha, um número que bate — isso não discute.</p>
+<h3>Já está a funcionar?</h3>
+<p>Ainda não: este artigo conta o desenho e o porquê. O campo entra no diário quando for construído — e aí os primeiros hits contam a história deles.</p>
 <div class="tags"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#agentes">#agentes</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#bastidores">#bastidores</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#local-first">#local-first</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#calibra%C3%A7%C3%A3o">#calibração</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#di%C3%A1rio">#diário</a></div>
 <div class="rel"><h2>Relacionados na montra</h2><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/memoria-de-agentes-isolar-fora-da-workspace-para-cortar-loop.html">&rarr; Memória de agentes: isolar fora da workspace para cortar loops</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html">&rarr; De scripts soltos a sistema: a convenção MODULE + handle()</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html">&rarr; Vigia tmux para bots no telemovel: auto-cura em &lt;=60s</a></div>
 </article>
