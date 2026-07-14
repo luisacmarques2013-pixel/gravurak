@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Campo oráculo: calibrar agentes locais com validação externa</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html</guid>
+    <pubDate>Tue, 14 Jul 2026 15:21:49 +0100</pubDate>
+    <description>Como introduzimos um campo de oráculo no diário do KrakenAI para calibrar agentes locais e distinguir método de adivinhação com validação externa.</description>
+  </item>
+  <item>
     <title>Um servidor, mil módulos: a arquitetura que sustenta o KrakenOS</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html</guid>
