@@ -381,15 +381,30 @@ section.banda{max-width:960px;margin:0 auto;padding:80px 22px 10px}
 
 <script>
 // Tudo local e minusculo: reveal ao scroll + parallax das marcas do heroi.
+// O reveal usa IO quando ha', mas o cinto-e-suspensorios e' o rect-check no
+// scroll — determinista em qualquer browser/ambiente.
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},
-    {threshold:.12});
-  document.querySelectorAll('.rev').forEach(function(el){io.observe(el);});
+  var revs=Array.prototype.slice.call(document.querySelectorAll('.rev'));
+  function liga(el){el.classList.add('on');}
+  function varre(){
+    var alvo=innerHeight*0.92;
+    revs=revs.filter(function(el){
+      if(el.getBoundingClientRect().top<alvo){liga(el);return false;}
+      return true;});
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){liga(e.target);io.unobserve(e.target);}});},
+      {threshold:.1});
+    revs.forEach(function(el){io.observe(el);});
+  }
   var marcas=document.querySelectorAll('.marca-flu');
   addEventListener('scroll',function(){var y=scrollY;
+    varre();
     marcas.forEach(function(m){m.style.transform='translateY('+(-y*parseFloat(m.dataset.par))+'px)';});
   },{passive:true});
+  addEventListener('load',varre);
+  varre();
 })();
 </script>
 </body></html>
