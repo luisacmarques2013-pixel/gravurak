@@ -1,0 +1,24 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-linecap="round">
+<title>Parede de xisto</title>
+<g stroke-width="1.8" opacity=".05">
+<path d="M12 96 C100 74 200 58 292 44"></path>
+<path d="M60 180 C160 156 260 140 380 120"></path>
+<path d="M24 268 C120 244 230 226 330 210"></path>
+<path d="M100 340 C190 320 300 300 388 286"></path>
+<path d="M40 40 C90 30 150 22 210 14"></path>
+<path d="M180 120 C250 105 320 94 386 84"></path>
+<path d="M8 180 C60 168 110 160 168 150"></path>
+<path d="M210 220 C270 208 330 198 392 190"></path>
+<path d="M120 386 C170 376 220 368 276 360"></path>
+<path d="M260 60 C300 52 350 44 392 38"></path>
+</g>
+<g stroke-width="1.2" opacity=".04">
+<path d="M80 20 C70 90 60 170 54 240"></path>
+<path d="M330 140 C322 210 314 280 308 350"></path>
+</g>
+<g stroke-width="2" opacity=".04" stroke-dasharray="0 5">
+<path d="M140 200 L200 188"></path>
+<path d="M60 320 L110 310"></path>
+</g>
+</svg>

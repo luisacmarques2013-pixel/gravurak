@@ -1,0 +1,1 @@
+As fontes em assets/fonts/ (Space Grotesk, JetBrains Mono) sao redistribuidas ao abrigo da SIL Open Font License 1.1 — https://openfontlicense.org

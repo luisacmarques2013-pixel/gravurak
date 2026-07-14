@@ -1,0 +1,20 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<title>Marcas do gravador — registo append-only</title>
+<g stroke-width="2.5">
+<path d="M14 16 L15 34 M22 15 L22 34 M30 16 L31 35 M38 15 L38 34"></path>
+<path d="M9 32 L44 17"></path>
+<path d="M54 16 L55 34 M62 15 L62 34 M70 16 L71 34"></path>
+<path d="M12 62 L24 48 L36 62 L48 48 L60 62 L72 48 L84 62 L96 48 L106 57"></path>
+<path d="M12 82 L48 81"></path>
+<path d="M17 82 L16 98 M25 82 L24 100 M33 81 L33 97 M41 82 L40 99"></path>
+<path d="M92 84 L104 84 L104 102 L92 102 Z"></path>
+</g>
+<g stroke-width="1.1" opacity=".45">
+<path d="M14 66 L26 52 L38 66 L50 52 L62 66"></path>
+</g>
+<g stroke-width="2" opacity=".45" stroke-dasharray="0 4.2">
+<path d="M80 25 L106 25"></path>
+<path d="M56 91 L84 91"></path>
+</g>
+</svg>

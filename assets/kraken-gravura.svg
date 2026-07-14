@@ -1,0 +1,26 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<title>Kraken — o projeto</title>
+<g stroke-width="2.6">
+<path d="M38 45 C34 8 84 6 82 44"></path>
+<path d="M39 45 C25 50 15 60 12 74 C10.8 80 12 87 17 91"></path>
+<path d="M46 48 C39 58 34 70 34 82 C34 89 36.5 95 41 98"></path>
+<path d="M56 49 C53 62 52 76 55 88 C56.3 93 58.5 97 62 99"></path>
+<path d="M68 49 C74 60 78 72 77 84 C76.4 90 79 94 84 94"></path>
+<path d="M79 45 C92 49 101 58 104 70 C105.8 77 104 85 98 89"></path>
+</g>
+<g stroke-width="2">
+<path d="M51 36 a2 2 0 1 0 -4 0 a2 2 0 1 0 4 0"></path>
+<path d="M73 36 a2 2 0 1 0 -4 0 a2 2 0 1 0 4 0"></path>
+</g>
+<g stroke-width="1.1" opacity=".45">
+<path d="M51 49 C47 60 44 72 46 84"></path>
+<path d="M62 49 C62 62 63 74 67 85"></path>
+<path d="M74 47 C80 54 84 62 86 71"></path>
+<path d="M41 40 C39 18 60 8 74 15"></path>
+</g>
+<g stroke-width="2" opacity=".45" stroke-dasharray="0 4.2">
+<path d="M41 48 C50 52 70 52 79 47"></path>
+<path d="M36 49 C25 55 17 64 15 76"></path>
+</g>
+</svg>

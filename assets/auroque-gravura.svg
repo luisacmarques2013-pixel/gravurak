@@ -1,0 +1,29 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<title>Auroque — soberania digital</title>
+<g stroke-width="2.7">
+<path d="M31 27 C23 30 17 36 15 43 C14 47 15 51 19 53"></path>
+<path d="M19 53 C24 55 29 53 32 50"></path>
+<path d="M32 50 C35 58 41 65 49 70"></path>
+<path d="M31 25 C28 16 24 10 17 8 C13 7 10 10 11 14"></path>
+<path d="M33 26 C41 20 50 19 57 22 C66 26 76 28 86 28 C97 28 103 34 103 44"></path>
+<path d="M103 44 C102 53 99 59 95 63"></path>
+<path d="M52 70 C63 74 79 72 92 63"></path>
+<path d="M46 70 L44 86 L45 101"></path>
+<path d="M93 63 L89 82 L88 101"></path>
+<path d="M102 42 C106 56 105 76 101 90"></path>
+</g>
+<g stroke-width="1.1" opacity=".45">
+<path d="M36 22 C34 14 30 8 24 6"></path>
+<path d="M54 70 L53 88 L55 101"></path>
+<path d="M100 57 L98 80 L100 100"></path>
+<path d="M101 90 L98 98 M101 90 L104 98"></path>
+<path d="M38 23 C46 17 55 16 62 19"></path>
+<path d="M60 34 L58 48 M67 34 L65 49 M74 35 L72 49"></path>
+<path d="M26.8 35 a1.8 1.8 0 1 0 -3.6 0 a1.8 1.8 0 1 0 3.6 0"></path>
+</g>
+<g stroke-width="2" opacity=".45" stroke-dasharray="0 4.2">
+<path d="M52 26 C56 32 58 39 57 47"></path>
+<path d="M36 30 C40 36 42 42 41 49"></path>
+</g>
+</svg>

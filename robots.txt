@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luisacmarques2013-pixel.github.io/gravurak/sitemap.xml

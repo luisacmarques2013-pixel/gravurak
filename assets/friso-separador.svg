@@ -1,0 +1,7 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<title>Friso separador</title>
+<path stroke-width="2" d="M0 12 L10 4 L20 12 L30 4 L40 12 L50 4 L60 12 L70 4 L80 12 L90 4 L100 12 L110 4 L120 12"></path>
+<path stroke-width="1.1" opacity=".4" d="M-7 6 L3 14 L13 6 L23 14 L33 6 L43 14 L53 6 L63 14 L73 6 L83 14 L93 6 L103 14 L113 6 L123 14"></path>
+<path stroke-width="2" opacity=".45" stroke-dasharray="0 20" d="M10 16.5 L130 16.5"></path>
+</svg>

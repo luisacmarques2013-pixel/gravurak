@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>KrakenAI</title>
+  <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
+  <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
+  <item>
+    <title>Um servidor, mil módulos: a arquitetura que sustenta o KrakenOS</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html</guid>
+    <pubDate>Tue, 14 Jul 2026 04:21:04 +0100</pubDate>
+    <description>Trocar um processo por porta por um único servidor modular (porta 8755) reduziu a complexidade e tornou viável rodar agentes locais numa RTX doméstica.</description>
+  </item>
+  <item>
+    <title>De bot que faz dinheiro a laboratório quant: o reframe do Forex v0</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-bot-que-faz-dinheiro-a-laboratorio-quant-o-reframe-do-for.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-bot-que-faz-dinheiro-a-laboratorio-quant-o-reframe-do-for.html</guid>
+    <pubDate>Tue, 14 Jul 2026 04:18:29 +0100</pubDate>
+    <description>Como mudámos o foco de “quanto rende?” para “isto sobrevive a custos e a um teste honesto?”, num template para validar hipóteses com agentes.</description>
+  </item>
+  <item>
+    <title>De scripts soltos a sistema: a convenção MODULE + handle()</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html</guid>
+    <pubDate>Tue, 14 Jul 2026 04:18:29 +0100</pubDate>
+    <description>Como padronizar metadados e um handle() unificado transformou scripts dispersos num OS coerente, onde cada novo módulo cabe numa tarde.</description>
+  </item>
+  <item>
+    <title>Sharpe 0.78 no papel: quando a warroom local diz “ainda não”</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html</guid>
+    <pubDate>Tue, 14 Jul 2026 04:14:00 +0100</pubDate>
+    <description>Como a warroom local detetou survivorship bias e custos de transação num Sharpe 0.78, antes que o entusiasmo inflacionasse os resultados do laboratório de ações.</description>
+  </item>
+  <item>
+    <title>Memória de agentes: isolar fora da workspace para cortar loops</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/memoria-de-agentes-isolar-fora-da-workspace-para-cortar-loop.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/memoria-de-agentes-isolar-fora-da-workspace-para-cortar-loop.html</guid>
+    <pubDate>Tue, 14 Jul 2026 03:37:07 +0100</pubDate>
+    <description>Como alojámos a Epopeia fora da workspace indexada por RAG para cortar loops de auto-reforço em agentes autónomos e preservar contexto ativo.</description>
+  </item>
+  <item>
+    <title>Epona em Código: Porquê Dar Identidade Mítica a Agentes Locais</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/epona-em-codigo-porque-dar-identidade-mitica-a-agentes-locai.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/epona-em-codigo-porque-dar-identidade-mitica-a-agentes-locai.html</guid>
+    <pubDate>Tue, 14 Jul 2026 03:34:38 +0100</pubDate>
+    <description>Começámos o módulo Epona para testar se arquétipos definidos estabilizam agentes locais sem cloud. Analisamos o design, os riscos e o que falta validar.</description>
+  </item>
+  <item>
+    <title>Separar Facto de Leitura no Devlog de IA: Uma Prática Anti-Hype</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html</guid>
+    <pubDate>Tue, 14 Jul 2026 03:31:27 +0100</pubDate>
+    <description>Como separamos facto de leitura nos devlogs do KrakenAI para manter transparência, evitar narrativas de marketing e documentar o desenvolvimento de agentes...</description>
+  </item>
+  <item>
+    <title>Esquemas de física em Typst: do prompt ao render sem retries</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html</guid>
+    <pubDate>Tue, 14 Jul 2026 03:28:42 +0100</pubDate>
+    <description>Helpers locais em Typst para diagramas de corpo-livre e plano inclinado. Testados num problema real com zero retries. Asset aberto no GitHub.</description>
+  </item>
+  <item>
+    <title>Prova final com LLM: de PDF a correção sem alucinar</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html</guid>
+    <pubDate>Tue, 14 Jul 2026 03:21:34 +0100</pubDate>
+    <description>O fluxo /provafinal converte um exame em PDF e devolve contas certas. Vemos como a deteção por pontuação fechou um desvio de cadeira que vazava formulários...</description>
+  </item>
+  <item>
+    <title>Como o graphify tornou uma pasta solta num grafo de conhecimento</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html</guid>
+    <pubDate>Tue, 14 Jul 2026 03:04:36 +0100</pubDate>
+    <description>A primeira corrida do graphify converteu 13 ficheiros num grafo navegável. Vê como escolhemos o Gemini free tier para extrair e poupámos tokens do Claude para a...</description>
+  </item>
+  <item>
+    <title>Vigia tmux para bots no telemovel: auto-cura em &lt;=60s</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html</guid>
+    <pubDate>Tue, 14 Jul 2026 02:50:24 +0100</pubDate>
+    <description>Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao.</description>
+  </item>
+</channel></rss>
