@@ -4,6 +4,27 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Cadência adaptativa: quando acordar o modelo pago na revisão matinal</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html</guid>
+    <pubDate>Fri, 17 Jul 2026 10:32:52 +0100</pubDate>
+    <description>Como cortámos custos de IA ao condicionar a execução do Opus à presença de obra nova ou deriva detetada, sem perder rigor na revisão diária.</description>
+  </item>
+  <item>
+    <title>Como tornámos o ensemble de consultores num motor selecionável</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-tornamos-o-ensemble-de-consultores-num-motor.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-tornamos-o-ensemble-de-consultores-num-motor.html</guid>
+    <pubDate>Fri, 17 Jul 2026 10:32:52 +0100</pubDate>
+    <description>Registoumos o MoA no `_FNS` para fan-out paralelo via `clients.ask(&#x27;conselho&#x27;, ...)`. O funil, rag e estafeta ligam-se ao ensemble local sem custos cloud.</description>
+  </item>
+  <item>
+    <title>Estafeta em leque: fan-out com consolidação num turno único</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/estafeta-em-leque-fan-out-com-consolidacao-num-turno-unico.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/estafeta-em-leque-fan-out-com-consolidacao-num-turno-unico.html</guid>
+    <pubDate>Fri, 17 Jul 2026 10:32:52 +0100</pubDate>
+    <description>Arquitetura do /estafeta no Kraken OS: fan-out paralelo de agentes e relatório consolidado num único turno, com rastreabilidade intacta e rodapé honesto para...</description>
+  </item>
+  <item>
     <title>ponte_stream: corrida latente exposta por spawn lento</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/ponte-stream-corrida-latente-exposta-por-spawn-lento-sob.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/ponte-stream-corrida-latente-exposta-por-spawn-lento-sob.html</guid>
