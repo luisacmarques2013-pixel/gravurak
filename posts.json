@@ -2,10 +2,26 @@
  "total": 18,
  "projetos": [
   {
+   "t": "Confere: cada movimento com o seu documento",
+   "d": "Reconciliação de extratos bancários com faturas e recibos: entrada por Telegram, email ou pasta vigiada, extração por QR da AT, OCR e visão por IA local, cruzamento exato em cêntimos e relatório pronto para o contabilista.",
+   "m": "2026-07-19",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/confere.html",
+   "en": {
+    "t": "Confere: every transaction with its document",
+    "d": "Bank statement reconciliation against invoices and receipts: intake by Telegram, email or a watched folder, extraction via tax QR codes, OCR and local AI vision, exact matching in integer cents and a report ready for the accountant.",
+    "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html"
+   }
+  },
+  {
    "t": "Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera",
    "d": "Sistema de gestão de urgência sobre o Protocolo de Manchester: admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho.",
    "m": "2026-07-19",
-   "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html",
+   "en": {
+    "t": "Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen",
+    "d": "Emergency management system built on the Manchester Triage Protocol: admission, symptom-based triage, a queue ordered by clinical priority, the doctor's panel and the waiting-room display. Software and healthcare in one design.",
+    "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/triagem-hospitalar.html"
+   }
   }
  ],
  "posts": [

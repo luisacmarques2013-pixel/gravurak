@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen &middot; KrakenAI</title>
+<meta name="description" content="Emergency management system built on the Manchester Triage Protocol: admission, symptom-based triage, a queue ordered by clinical priority, the doctor's panel and the waiting-room display. Software and healthcare in one design."/>
+<link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/triagem-hospitalar.html"/>
+<link rel="alternate" hreflang="pt" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"/>
+<link rel="alternate" hreflang="en" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/triagem-hospitalar.html"/>
+<link rel="alternate" hreflang="x-default" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"/>
+<link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
+<link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen"/>
+<meta property="og:description" content="Emergency management system built on the Manchester Triage Protocol: admission, symptom-based triage, a queue ordered by clinical priority, the doctor's panel and the waiting-room display. Software and healthcare in one design."/>
+<meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/triagem-hospitalar.html"/>
+<meta property="og:site_name" content="KrakenAI"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png"/>
+<meta name="twitter:title" content="Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen"/>
+<meta name="twitter:description" content="Emergency management system built on the Manchester Triage Protocol: admission, symptom-based triage, a queue ordered by clinical priority, the doctor's panel and the waiting-room display. Software and healthcare in one design."/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen",
+ "description": "Emergency management system built on the Manchester Triage Protocol: admission, symptom-based triage, a queue ordered by clinical priority, the doctor's panel and the waiting-room display. Software and healthcare in one design.",
+ "inLanguage": "en",
+ "url": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/triagem-hospitalar.html",
+ "author": {"@type": "Organization", "name": "KrakenAI", "url": "https://luisacmarques2013-pixel.github.io/gravurak/index.html"},
+ "publisher": {"@type": "Organization", "name": "KrakenAI"}
+}
+</script>
+<style>
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+:root{--bg:#03100f;--teal:#2ee6c4;--cyan:#22d3ee;--gold:#e6c35a;--fg:#eafff9;
+  --dim:#8fc4ba;--line:rgba(46,230,196,.16);
+  --m-verm:#e11d48;--m-lar:#f97316;--m-ama:#eab308;--m-verde:#22c55e;--m-azul:#3b82f6}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  line-height:1.75;font-size:15px;
+  background:radial-gradient(900px 500px at 85% -10%,#0a3a36 0,transparent 55%),
+    url(https://luisacmarques2013-pixel.github.io/gravurak/assets/xisto-tile-fixo.svg) 0 0/400px 400px repeat,var(--bg)}
+.wrap{max-width:760px;margin:0 auto;padding:36px 22px 70px}
+a{color:var(--teal)} a:hover{color:var(--cyan)}
+header.site{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+.wordmark{height:34px;width:auto;display:block}
+.direita{display:flex;align-items:center;gap:16px}
+.tagline{color:var(--dim);font-size:11px;letter-spacing:1px}
+nav.lang{font-size:11px;letter-spacing:1.5px}
+nav.lang a{text-decoration:none;color:var(--dim);padding:2px 4px}
+nav.lang a:hover{color:var(--cyan)}
+nav.lang a.ativa{color:var(--teal);border-bottom:1px solid var(--teal)}
+.eyebrow{color:var(--gold);font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:13px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 6px}
+h1{font-family:"Space Grotesk",system-ui,sans-serif;font-size:31px;line-height:1.18;
+  margin:0 0 14px;color:var(--fg);text-wrap:balance}
+h2{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;margin:40px 0 12px;color:var(--teal)}
+h3{font-size:15.5px;margin:20px 0 6px;color:var(--cyan);font-family:"Space Grotesk",system-ui,sans-serif}
+p.lead{font-size:16px;color:var(--fg)}
+p{margin:10px 0}
+.manchester{display:flex;gap:4px;margin:26px 0 8px}
+.manchester div{flex:1;height:8px;border-radius:4px}
+.manchester .v{background:var(--m-verm)}.manchester .l{background:var(--m-lar)}
+.manchester .a{background:var(--m-ama)}.manchester .g{background:var(--m-verde)}
+.manchester .z{background:var(--m-azul)}
+.mleg{display:flex;gap:4px;margin:0 0 4px;font-size:10.5px;color:var(--dim);text-align:center}
+.mleg span{flex:1}
+.mnote{color:var(--dim);font-size:12px;margin-top:2px}
+figure{margin:22px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:rgba(4,24,22,.5)}
+figure img{width:100%;display:block}
+figcaption{padding:10px 16px 12px;color:var(--dim);font-size:12.5px;border-top:1px solid var(--line)}
+figcaption b{color:var(--fg);font-weight:400}
+ol.circuito{list-style:none;padding:0;margin:14px 0;counter-reset:passo}
+ol.circuito li{position:relative;padding:0 0 18px 46px;counter-increment:passo}
+ol.circuito li::before{content:counter(passo);position:absolute;left:0;top:2px;
+  width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:14px;
+  color:var(--bg);background:var(--cor,var(--teal))}
+ol.circuito li:nth-child(1){--cor:var(--m-verm)}
+ol.circuito li:nth-child(2){--cor:var(--m-lar)}
+ol.circuito li:nth-child(3){--cor:var(--m-ama)}
+ol.circuito li:nth-child(4){--cor:var(--m-verde)}
+ol.circuito li:nth-child(5){--cor:var(--m-azul)}
+ol.circuito li b{color:var(--fg);font-family:"Space Grotesk",system-ui,sans-serif;font-size:15.5px}
+ol.circuito li span{color:var(--dim);font-size:13.5px;display:block;margin-top:2px}
+ul.mec{list-style:none;padding:0;margin:12px 0}
+ul.mec li{border-left:2px solid var(--line);padding:6px 0 6px 16px;margin:8px 0;font-size:13.5px;color:var(--dim)}
+ul.mec li b{color:var(--fg);font-weight:400}
+ul.mec code{background:#06201d;border-radius:4px;padding:1px 6px;font-size:.92em;color:var(--teal)}
+.poss{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.poss div{border:1px solid var(--line);border-radius:12px;padding:12px 15px;
+  background:rgba(4,24,22,.5);font-size:13px;color:var(--dim)}
+.poss div b{color:var(--fg);display:block;font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:14px;margin-bottom:4px;font-weight:400}
+@media (max-width:560px){.poss{grid-template-columns:1fr}}
+blockquote{border-left:2px solid var(--gold);margin:18px 0;padding:4px 16px;color:var(--dim)}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;
+  color:var(--dim);font-size:12px}
+footer a{color:var(--teal)}
+</style></head><body>
+<div class="wrap">
+<header class="site">
+  <a href="../../index.html"><img class="wordmark" src="https://luisacmarques2013-pixel.github.io/gravurak/assets/krakenai-wordmark-dark.svg" alt="KrakenAI · gravurak" /></a>
+  <div class="direita">
+    <span class="tagline">recorded and verified</span>
+    <nav class="lang" aria-label="Language"><a href="../triagem-hospitalar.html">PT</a> · <a class="ativa" href="#" aria-current="page">EN</a></nav>
+  </div>
+</header>
+
+<p class="eyebrow">Case study · Software ✕ Healthcare</p>
+<h1>Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen</h1>
+<p class="lead">An emergency management system built on the Manchester Triage Protocol,
+the same protocol that orders Portuguese emergency departments. Two disciplines in one
+design: clinical practice sets the rules, software makes them executable. Whoever walks
+in is admitted, triaged by symptoms, ordered by clinical priority and called to the
+consultation room. Each role on the team sees only what belongs to it.</p>
+
+<div class="manchester"><div class="v"></div><div class="l"></div><div class="a"></div><div class="g"></div><div class="z"></div></div>
+<div class="mleg"><span>Emergent · immediate</span><span>Very urgent · ≤10 min</span><span>Urgent · ≤60 min</span><span>Standard · ≤120 min</span><span>Non-urgent · ≤240 min</span></div>
+<p class="mnote">The five Manchester colours and their target times run through the whole system, from triage to the waiting-room display.</p>
+
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png" alt="Public waiting-room display: ticket being called, consultation room, department status and Manchester target times" />
+  <figcaption><b>The waiting-room display, designed for a TV.</b> The ticket being called, the room,
+  how many are waiting, without exposing a single name. Privacy was not an afterthought: anonymous tickets are part of the design.</figcaption>
+</figure>
+
+<h2>The patient's journey</h2>
+<p>The system follows the emergency episode from start to finish, backed by a state
+machine: admitted → triaged → in consultation → outcome.</p>
+<ol class="circuito">
+  <li><b>Admission</b><span>Arrival registration with national health number validation. A dedicated
+  emergency entry for patients arriving unconscious or without identification: the episode
+  opens first, identity is resolved later.</span></li>
+  <li><b>Nursing triage</b><span>Selectable symptoms and vital signs (blood pressure, heart rate,
+  temperature, SpO₂). Priority is computed by the Manchester engine; the nurse confirms it,
+  never invents it.</span></li>
+  <li><b>Waiting queue</b><span>Ordered by colour and time, with counters per priority and
+  target times in sight. Refreshes on its own every 30 seconds.</span></li>
+  <li><b>Doctor's panel</b><span>"Call next" follows clinical priority, not order of arrival.
+  Clinical notes per episode and closure with a recorded outcome.</span></li>
+  <li><b>Waiting room</b><span>The public display closes the loop: patients see the ticket and
+  the room, the team sees the state of the department.</span></li>
+</ol>
+
+<h2>Back-office functions</h2>
+<ul class="mec">
+  <li><b>Patient management:</b> record, search, visit history and validated editing.</li>
+  <li><b>Management reports:</b> patients per priority, average waiting time and "left without
+  being seen" (a real emergency-department indicator), by date range, with CSV export.</li>
+  <li><b>User management:</b> four profiles with distinct access: Admin, Doctor, Nurse and
+  Clerk. Each one logs in and sees only its own panels.</li>
+</ul>
+
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/03-admissao.png" alt="Patient admission screen with new patient form, list of admitted patients and emergency entry button" />
+  <figcaption><b>Admission.</b> New patient on the left, patients awaiting triage on the right,
+  emergency entry always at hand.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/04-triagem.png" alt="Nursing triage screen with the queue of patients awaiting triage" />
+  <figcaption><b>Nursing triage.</b> The queue of those waiting; double-click opens the
+  symptoms and vital signs form.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/05-fila-espera.png" alt="Emergency waiting queue with the five Manchester priority cards and episodes ordered by colour" />
+  <figcaption><b>Waiting queue.</b> The five colours with counters and target times; each episode
+  carries its priority stripe.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/06-medico.png" alt="Doctor's panel with the queue of triaged patients, waiting times and call and close actions" />
+  <figcaption><b>Doctor's panel.</b> Each patient's waiting time in sight; "Call next"
+  follows clinical priority.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/07-relatorios.png" alt="Reports screen with patients per priority in a date range and CSV export" />
+  <figcaption><b>Reports.</b> Indicators by date range, ready to export to CSV.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/08-utentes.png" alt="Patient management with searchable table, visits and last visit" />
+  <figcaption><b>Patients.</b> Search, visit counts and access to the history of each
+  episode.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/09-utilizadores.png" alt="User management with account creation and Admin, Doctor, Nurse and Clerk profiles" />
+  <figcaption><b>Users.</b> Accounts by staff number and profile; passwords are never
+  stored in plain text.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/01-login.png" alt="Login screen of the Hospital Triage System" />
+  <figcaption><b>Login.</b> Staff number and password; the profile decides what you see
+  inside.</figcaption>
+</figure>
+
+<h2>The mechanisms underneath</h2>
+<ul class="mec">
+  <li><b>MVC architecture with DAOs:</b> model, view and controllers kept apart; data access
+  isolated in <code>UtenteDAO</code> and <code>UtilizadorDAO</code>.</li>
+  <li><b>Two SQLite databases, on purpose:</b> credentials in one file, clinical data in
+  another. Stealing one does not give you the other.</li>
+  <li><b>Passwords with scrypt:</b> salted hashes, resistant to brute force; never in plain text.</li>
+  <li><b>Episode state machine:</b> <code>ADMITTED → TRIAGED → IN_CONSULTATION →
+  outcome</code>; every transition has rules.</li>
+  <li><b>Priority engine:</b> critical symptoms pull the colour up; the combination decides,
+  not opinion.</li>
+  <li><b>Check-digit validators:</b> tax number, national health number and phone verified
+  mathematically, not by eye.</li>
+  <li><b>Role-based access control (RBAC):</b> the profile builds the interface: a clerk
+  never sees the doctor's panel.</li>
+</ul>
+
+<h2>Possibilities</h2>
+<div class="poss">
+  <div><b>Networked multi-station</b>Admission, triage and consultation rooms on different
+  machines over the same database; the DAO design already allows it.</div>
+  <div><b>A real TV in the waiting room</b>The public display was born for a large screen;
+  all that is missing is the HDMI cable.</div>
+  <div><b>Management indicators</b>Times per colour, per shift, per season: the reports are
+  the seed of an emergency management dashboard.</div>
+  <div><b>Target-time alerts</b>An "urgent" patient past the 60-minute mark should raise an
+  alert. The engine already knows the times; only the alarm is missing.</div>
+  <div><b>Other clinical queues</b>Health centres, private clinics, veterinary practices:
+  wherever there is clinical priority and a waiting room, the flow fits.</div>
+  <div><b>Local-first by nature</b>Clinical data lives on the machine, not in a third-party
+  cloud: privacy by architecture, not by promise.</div>
+</div>
+
+<blockquote>Built in partnership with AI and verified by running it: before any image on this
+page, the login, the priority engine and the validators went through real tests. House rule:
+only what survives verification gets shown.</blockquote>
+
+<footer>
+Born in an academic context (Software Engineering) and grown into a house case study.
+Source code available on request · Contact: <a href="mailto:gravurak@zohomail.eu">gravurak@zohomail.eu</a>
+</footer>
+</div>
+</body></html>

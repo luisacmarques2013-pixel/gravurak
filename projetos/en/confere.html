@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Confere: every transaction with its document &middot; KrakenAI</title>
+<meta name="description" content="Bank statement reconciliation against invoices and receipts: intake by Telegram, email or a watched folder, extraction via tax QR codes, OCR and local AI vision, exact matching in integer cents and a report ready for the accountant."/>
+<link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html"/>
+<link rel="alternate" hreflang="pt" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/confere.html"/>
+<link rel="alternate" hreflang="en" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html"/>
+<link rel="alternate" hreflang="x-default" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/confere.html"/>
+<link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
+<link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Confere: every transaction with its document"/>
+<meta property="og:description" content="Bank statement reconciliation against invoices and receipts: intake by Telegram, email or a watched folder, extraction via tax QR codes, OCR and local AI vision, exact matching in integer cents and a report ready for the accountant."/>
+<meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html"/>
+<meta property="og:site_name" content="KrakenAI"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/confere/01-movimentos.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/confere/01-movimentos.png"/>
+<meta name="twitter:title" content="Confere: every transaction with its document"/>
+<meta name="twitter:description" content="Bank statement reconciliation against invoices and receipts: intake by Telegram, email or a watched folder, extraction via tax QR codes, OCR and local AI vision, exact matching in integer cents and a report ready for the accountant."/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Confere: every transaction with its document",
+ "description": "Bank statement reconciliation against invoices and receipts: intake by Telegram, email or a watched folder, extraction via tax QR codes, OCR and local AI vision, exact matching in integer cents and a report ready for the accountant.",
+ "inLanguage": "en",
+ "url": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html",
+ "author": {"@type": "Organization", "name": "KrakenAI", "url": "https://luisacmarques2013-pixel.github.io/gravurak/index.html"},
+ "publisher": {"@type": "Organization", "name": "KrakenAI"}
+}
+</script>
+<style>
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+:root{--bg:#03100f;--teal:#2ee6c4;--cyan:#22d3ee;--gold:#e6c35a;--fg:#eafff9;
+  --dim:#8fc4ba;--line:rgba(46,230,196,.16);
+  --c-ok:#1F8A5B;--c-falta:#C98A1A;--c-sem:#B3261E}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  line-height:1.75;font-size:15px;
+  background:radial-gradient(900px 500px at 85% -10%,#0a3a36 0,transparent 55%),
+    url(https://luisacmarques2013-pixel.github.io/gravurak/assets/xisto-tile-fixo.svg) 0 0/400px 400px repeat,var(--bg)}
+.wrap{max-width:760px;margin:0 auto;padding:36px 22px 70px}
+a{color:var(--teal)} a:hover{color:var(--cyan)}
+header.site{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+.wordmark{height:34px;width:auto;display:block}
+.direita{display:flex;align-items:center;gap:16px}
+.tagline{color:var(--dim);font-size:11px;letter-spacing:1px}
+nav.lang{font-size:11px;letter-spacing:1.5px}
+nav.lang a{text-decoration:none;color:var(--dim);padding:2px 4px}
+nav.lang a:hover{color:var(--cyan)}
+nav.lang a.ativa{color:var(--teal);border-bottom:1px solid var(--teal)}
+.eyebrow{color:var(--gold);font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:13px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 6px}
+h1{font-family:"Space Grotesk",system-ui,sans-serif;font-size:31px;line-height:1.18;
+  margin:0 0 14px;color:var(--fg);text-wrap:balance}
+h2{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;margin:40px 0 12px;color:var(--teal)}
+p.lead{font-size:16px;color:var(--fg)}
+p{margin:10px 0}
+.estados{display:flex;gap:4px;margin:26px 0 8px}
+.estados div{flex:1;height:8px;border-radius:4px}
+.estados .ok{background:var(--c-ok)}
+.estados .falta{background:var(--c-falta)}
+.estados .sem{background:var(--c-sem)}
+.mleg{display:flex;gap:4px;margin:0 0 4px;font-size:10.5px;color:var(--dim);text-align:center}
+.mleg span{flex:1}
+.mnote{color:var(--dim);font-size:12px;margin-top:2px}
+figure{margin:22px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:rgba(4,24,22,.5)}
+figure img{width:100%;display:block}
+figcaption{padding:10px 16px 12px;color:var(--dim);font-size:12.5px;border-top:1px solid var(--line)}
+figcaption b{color:var(--fg);font-weight:400}
+ol.circuito{list-style:none;padding:0;margin:14px 0;counter-reset:passo}
+ol.circuito li{position:relative;padding:0 0 18px 46px;counter-increment:passo}
+ol.circuito li::before{content:counter(passo);position:absolute;left:0;top:2px;
+  width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:14px;
+  color:#fff;background:var(--cor,var(--c-ok))}
+ol.circuito li:nth-child(1){--cor:var(--c-ok)}
+ol.circuito li:nth-child(2){--cor:var(--c-falta)}
+ol.circuito li:nth-child(3){--cor:var(--c-sem)}
+ol.circuito li:nth-child(4){--cor:var(--c-ok)}
+ol.circuito li:nth-child(5){--cor:var(--c-falta)}
+ol.circuito li b{color:var(--fg);font-family:"Space Grotesk",system-ui,sans-serif;font-size:15.5px}
+ol.circuito li span{color:var(--dim);font-size:13.5px;display:block;margin-top:2px}
+ul.mec{list-style:none;padding:0;margin:12px 0}
+ul.mec li{border-left:2px solid var(--line);padding:6px 0 6px 16px;margin:8px 0;font-size:13.5px;color:var(--dim)}
+ul.mec li b{color:var(--fg);font-weight:400}
+ul.mec code{background:#06201d;border-radius:4px;padding:1px 6px;font-size:.92em;color:var(--teal)}
+.poss{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.poss div{border:1px solid var(--line);border-radius:12px;padding:12px 15px;
+  background:rgba(4,24,22,.5);font-size:13px;color:var(--dim)}
+.poss div b{color:var(--fg);display:block;font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:14px;margin-bottom:4px;font-weight:400}
+@media (max-width:560px){.poss{grid-template-columns:1fr}}
+blockquote{border-left:2px solid var(--gold);margin:18px 0;padding:4px 16px;color:var(--dim)}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;
+  color:var(--dim);font-size:12px}
+footer a{color:var(--teal)}
+</style></head><body>
+<div class="wrap">
+<header class="site">
+  <a href="../../index.html"><img class="wordmark" src="https://luisacmarques2013-pixel.github.io/gravurak/assets/krakenai-wordmark-dark.svg" alt="KrakenAI · gravurak" /></a>
+  <div class="direita">
+    <span class="tagline">recorded and verified</span>
+    <nav class="lang" aria-label="Language"><a href="../confere.html">PT</a> · <a class="ativa" href="#" aria-current="page">EN</a></nav>
+  </div>
+</header>
+
+<p class="eyebrow">Case study · Software ✕ Accounting</p>
+<h1>Confere: every transaction with its document</h1>
+<p class="lead">At the end of the month, a small business has the bank statement on one side
+and a folder of invoices and receipts on the other. Confere, by LMsystems, crosses the two
+and answers the question that matters: which transaction is reconciled, which needs review,
+and which one is missing its document. All ready to hand to the accountant.</p>
+
+<div class="estados"><div class="ok"></div><div class="falta"></div><div class="sem"></div></div>
+<div class="mleg"><span>Reconciled</span><span>Missing document</span><span>No match</span></div>
+<p class="mnote">Three states run through the whole product, from the panel to the Excel report. Colour tells the owner where to look first.</p>
+
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/confere/01-movimentos.png" alt="Confere panel with monthly indicators, balance and the transactions ledger with reconciled, missing document and review states" />
+  <figcaption><b>The panel, in the browser, on your own machine.</b> Monthly indicators, balance,
+  and the transactions ledger with the state of every row. The values on this page are sample
+  data, as the application footer itself states.</figcaption>
+</figure>
+
+<h2>The journey of a document</h2>
+<p>From a photo taken at the counter to a reconciled row on the panel, the path is always the same.</p>
+<ol class="circuito">
+  <li><b>Intake, whichever way it comes</b><span>A photo of the receipt sent to the Telegram
+  bot, a PDF arriving by email, or a file dropped into the watched folder. The bot confirms on
+  the spot: "Received, queued for processing". Email is read in read-only mode; it never marks
+  or deletes anything in the mailbox.</span></li>
+  <li><b>Classification</b><span>Each file is identified as a bank statement or a fiscal
+  document and goes to the right queue. The watched folder waits for the file to finish
+  copying before touching it.</span></li>
+  <li><b>Laddered extraction</b><span>First the tax authority QR code, mandatory on
+  Portuguese invoices. Failing that, the PDF text; then OCR; and only as a last resort AI
+  vision, running locally, with a second model reviewing doubtful cases and a hard cap on
+  calls. Cheap to expensive: only the necessary step gets used.</span></li>
+  <li><b>Exact matching</b><span>Each transaction looks for its document by amount and date,
+  with money always in integer cents, never floating point. Above the confidence threshold it
+  is reconciled; in doubt it goes to review. The system does not decide on its own what it is
+  not sure about.</span></li>
+  <li><b>Delivery</b><span>A local panel in the browser, a monthly Excel report, history in
+  SQLite, and the files tidied up: processed on one side, orphans on the other.</span></li>
+</ol>
+
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/confere/02-falta-documento.png" alt="Confere panel filtered by the missing document tab, with unresolved transactions in amber and red" />
+  <figcaption><b>The pending queue.</b> One click isolates what needs attention: four
+  transactions without a document and one with no possible match, such as bank fees.</figcaption>
+</figure>
+
+<h2>The mechanisms underneath</h2>
+<ul class="mec">
+  <li><b>Exact money:</b> every amount in integer cents, end to end. The reconciliation
+  balances to the cent or it does not balance.</li>
+  <li><b>Idempotent reconciliation:</b> running the same month twice gives the same result.
+  Saving by period replaces, never duplicates.</li>
+  <li><b>Extraction ladder:</b> tax QR code, native text, OCR, AI vision. Each step is only
+  used if the previous one fails, and vision has an A/B judge and a limited budget.</li>
+  <li><b>Tax-number check-digit validation:</b> on the statement and on the documents, a
+  misread tax number does not get through.</li>
+  <li><b>Per-row states:</b> <code>pending → reconciled / review / missing document /
+  orphan</code>. Documents from future months wait their turn in the queue.</li>
+  <li><b>Local-first:</b> runs on your own machine, at <code>127.0.0.1</code>. Works without
+  internet, except to fetch email attachments. Financial data never leaves home.</li>
+  <li><b>Silent mode:</b> a schedulable routine reconciles on its own and leaves a summary
+  of pending items in plain language, ready to read in the morning.</li>
+</ul>
+
+<h2>Who it is for</h2>
+<div class="poss">
+  <div><b>For the business owner</b>Taking a photo of the receipt at the counter is enough.
+  The rest is automatic, and closing the month stops being a lost afternoon.</div>
+  <div><b>For the accountant</b>One chore per client, multiplied by dozens. Confere delivers
+  each month already matched: only the exceptions ask for human attention.</div>
+  <div><b>Several channels, one queue</b>Telegram, email and the watched folder feed the same
+  pipeline. However the paperwork arrives, it ends up in the same place.</div>
+  <div><b>Privacy by architecture</b>Statements and invoices never go up to any cloud.
+  The vision AI runs at home, on the same machine.</div>
+</div>
+
+<blockquote>A product under construction at the house, at version 0.1: the extraction engine,
+the matching, the panel, the Excel report and the history are working and exercised with real
+documents. The images on this page use the application sample data, for obvious reasons.</blockquote>
+
+<footer>
+Confere is an LMsystems product under development · Contact: <a href="mailto:gravurak@zohomail.eu">gravurak@zohomail.eu</a>
+</footer>
+</div>
+</body></html>
