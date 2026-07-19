@@ -1,6 +1,13 @@
 {
- "total": 17,
+ "total": 18,
  "posts": [
+  {
+   "t": "URL estável a partir de tunel efémero: proxy sem domínio próprio",
+   "d": "Sem registo de domínio, desenhamos uma fachada que combina quick tunnel + worker de proxy + chave KV. O vigia tmux recria tudo em menos de um minuto se o...",
+   "m": "2026-07-19",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html",
+   "pilar": "soberania"
+  },
   {
    "t": "Um portefólio que responde: o agente público da montra",
    "d": "Como a landing estática ganhou um vendedor 24/7: Sonnet num telemóvel, cache que trava antes de gastar, caretos adversariais e URL estável sem domínio.",
