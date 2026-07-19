@@ -1,5 +1,13 @@
 {
  "total": 18,
+ "projetos": [
+  {
+   "t": "Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera",
+   "d": "Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho.",
+   "m": "2026-07-19",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"
+  }
+ ],
  "posts": [
   {
    "t": "URL estável a partir de tunel efémero: proxy sem domínio próprio",
