@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera &middot; KrakenAI</title>
-<meta name="description" content="Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
+<meta name="description" content="Sistema de gestão de urgência sobre o Protocolo de Manchester: admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
 <meta name="keywords" content="triagem hospitalar, Protocolo de Manchester, urgência, Java, SQLite, scrypt, RBAC, saúde, caso de estudo"/>
 <link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"/>
 <link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
 <link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera"/>
-<meta property="og:description" content="Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
+<meta property="og:description" content="Sistema de gestão de urgência sobre o Protocolo de Manchester: admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
 <meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"/>
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
@@ -16,13 +16,13 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png"/>
 <meta name="twitter:title" content="Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera"/>
-<meta name="twitter:description" content="Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
+<meta name="twitter:description" content="Sistema de gestão de urgência sobre o Protocolo de Manchester: admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Article",
  "headline": "Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera",
- "description": "Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho.",
+ "description": "Sistema de gestão de urgência sobre o Protocolo de Manchester: admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho.",
  "inLanguage": "pt-PT",
  "url": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html",
  "author": {"@type": "Organization", "name": "KrakenAI", "url": "https://luisacmarques2013-pixel.github.io/gravurak/index.html"},
@@ -108,20 +108,18 @@ footer a{color:var(--teal)}
 
 <p class="eyebrow">Caso de estudo · Informática ✕ Saúde</p>
 <h1>Triagem Hospitalar: uma urgência inteira, do balcão ao ecrã da sala de espera</h1>
-<p class="lead">Um sistema de gestão de urgência construído sobre o Protocolo de Manchester
-— o mesmo que ordena as urgências portuguesas. Duas disciplinas no mesmo desenho:
+<p class="lead">Um sistema de gestão de urgência construído sobre o Protocolo de Manchester, o mesmo que ordena as urgências portuguesas. Duas disciplinas no mesmo desenho:
 a clínica dita as regras, a informática torna-as executáveis. Quem chega é admitido,
-triado por sintomas, ordenado por prioridade clínica e chamado ao consultório —
-e cada papel da equipa vê apenas o que lhe compete.</p>
+triado por sintomas, ordenado por prioridade clínica e chamado ao consultório. Cada papel da equipa vê apenas o que lhe compete.</p>
 
 <div class="manchester"><div class="v"></div><div class="l"></div><div class="a"></div><div class="g"></div><div class="z"></div></div>
 <div class="mleg"><span>Emergente · imediato</span><span>Muito urgente · ≤10 min</span><span>Urgente · ≤60 min</span><span>Pouco urgente · ≤120 min</span><span>Não urgente · ≤240 min</span></div>
-<p class="mnote">As cinco cores de Manchester e os tempos-alvo de cada uma atravessam o sistema inteiro — da triagem ao painel da sala de espera.</p>
+<p class="mnote">As cinco cores de Manchester e os tempos-alvo de cada uma atravessam o sistema inteiro, da triagem ao painel da sala de espera.</p>
 
 <figure>
   <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png" alt="Painel público da sala de espera: senha chamada, consultório, estado da urgência e tempos-alvo de Manchester" />
   <figcaption><b>O painel da sala de espera, pensado para uma TV.</b> Senha chamada, consultório,
-  quantos aguardam — sem expor um único nome. A privacidade não foi um remendo: as senhas anónimas fazem parte do desenho.</figcaption>
+  quantos aguardam, sem expor um único nome. A privacidade não foi um remendo: as senhas anónimas fazem parte do desenho.</figcaption>
 </figure>
 
 <h2>O circuito do utente</h2>
@@ -129,11 +127,10 @@ e cada papel da equipa vê apenas o que lhe compete.</p>
 estados por trás: admitido → triado → em atendimento → desfecho.</p>
 <ol class="circuito">
   <li><b>Admissão</b><span>Registo de chegada com validação de SNS. Entrada de emergência
-  dedicada para quem chega inconsciente ou sem identificação — o episódio abre primeiro,
+  dedicada para quem chega inconsciente ou sem identificação: o episódio abre primeiro,
   a identidade resolve-se depois.</span></li>
   <li><b>Triagem de enfermagem</b><span>Sintomas selecionáveis e sinais vitais (tensão,
-  frequência cardíaca, temperatura, SpO₂). A prioridade é calculada pelo motor de Manchester
-  — o enfermeiro confirma, não inventa.</span></li>
+  frequência cardíaca, temperatura, SpO₂). A prioridade é calculada pelo motor de Manchester; o enfermeiro confirma, não inventa.</span></li>
   <li><b>Fila de espera</b><span>Ordenada por cor e hora, com contadores por prioridade e
   tempos-alvo à vista. Atualiza sozinha a cada 30 segundos.</span></li>
   <li><b>Painel do médico</b><span>«Chamar próximo» respeita a prioridade clínica, não a ordem
@@ -144,10 +141,10 @@ estados por trás: admitido → triado → em atendimento → desfecho.</p>
 
 <h2>Funções de retaguarda</h2>
 <ul class="mec">
-  <li><b>Gestão de utentes</b> — ficha, pesquisa, histórico de visitas e edição com validação.</li>
-  <li><b>Relatórios de gestão</b> — doentes por prioridade, tempo médio de espera e «saíram sem
+  <li><b>Gestão de utentes:</b> ficha, pesquisa, histórico de visitas e edição com validação.</li>
+  <li><b>Relatórios de gestão:</b> doentes por prioridade, tempo médio de espera e «saíram sem
   ser vistos» (um indicador real de urgência), por intervalo de datas, com exportação CSV.</li>
-  <li><b>Gestão de utilizadores</b> — quatro perfis com acessos distintos: Admin, Médico,
+  <li><b>Gestão de utilizadores:</b> quatro perfis com acessos distintos: Admin, Médico,
   Enfermeiro e Técnico. Cada um entra e vê apenas os seus painéis.</li>
 </ul>
 
@@ -194,40 +191,37 @@ estados por trás: admitido → triado → em atendimento → desfecho.</p>
 
 <h2>Os mecanismos por baixo</h2>
 <ul class="mec">
-  <li><b>Arquitetura MVC com DAOs</b> — modelo, vista e controladores separados; o acesso a
+  <li><b>Arquitetura MVC com DAOs:</b> modelo, vista e controladores separados; o acesso a
   dados isolado em <code>UtenteDAO</code> e <code>UtilizadorDAO</code>.</li>
-  <li><b>Duas bases de dados SQLite, de propósito</b> — credenciais num ficheiro, dados
+  <li><b>Duas bases de dados SQLite, de propósito:</b> credenciais num ficheiro, dados
   clínicos noutro. Quem rouba um não leva o outro.</li>
-  <li><b>Palavras-passe com scrypt</b> — hash com sal, resistente a força-bruta; nunca em claro.</li>
-  <li><b>Máquina de estados do episódio</b> — <code>ADMITIDO → TRIADO → EM_ATENDIMENTO →
+  <li><b>Palavras-passe com scrypt:</b> hash com sal, resistente a força-bruta; nunca em claro.</li>
+  <li><b>Máquina de estados do episódio:</b> <code>ADMITIDO → TRIADO → EM_ATENDIMENTO →
   desfecho</code>; cada transição tem regras.</li>
-  <li><b>Motor de prioridades</b> — sintomas críticos puxam a cor para cima; a combinação
+  <li><b>Motor de prioridades:</b> sintomas críticos puxam a cor para cima; a combinação
   decide, não a opinião.</li>
-  <li><b>Validadores com dígito de controlo</b> — NIF, número de SNS e telefone verificados
+  <li><b>Validadores com dígito de controlo:</b> NIF, número de SNS e telefone verificados
   matematicamente, não à vista.</li>
-  <li><b>Controlo de acessos por papel (RBAC)</b> — o perfil constrói a interface: um técnico
+  <li><b>Controlo de acessos por papel (RBAC):</b> o perfil constrói a interface: um técnico
   nunca vê o painel do médico.</li>
 </ul>
 
 <h2>Possibilidades</h2>
 <div class="poss">
   <div><b>Multi-posto em rede</b>Admissão, triagem e gabinetes em máquinas diferentes sobre a
-  mesma base de dados — o desenho DAO já o permite.</div>
+  mesma base de dados; o desenho DAO já o permite.</div>
   <div><b>TV real na sala de espera</b>O painel público já nasceu para ecrã grande; falta só
   o cabo HDMI.</div>
-  <div><b>Indicadores para gestão</b>Tempos por cor, por turno, por época — os relatórios são
+  <div><b>Indicadores para gestão</b>Tempos por cor, por turno, por época: os relatórios são
   a semente de um painel de gestão de urgência.</div>
-  <div><b>Alertas de tempo-alvo</b>Um utente «urgente» a passar dos 60 minutos devia gritar
-  — o motor já sabe os tempos, falta o alarme.</div>
+  <div><b>Alertas de tempo-alvo</b>Um utente «urgente» a passar dos 60 minutos devia disparar um aviso. O motor já sabe os tempos; falta o alarme.</div>
   <div><b>Outras filas clínicas</b>Centros de saúde, clínicas privadas, veterinárias: onde
   houver prioridade clínica e sala de espera, o circuito serve.</div>
-  <div><b>Local-first por natureza</b>Os dados clínicos vivem na máquina, não numa nuvem de
-  terceiros — privacidade por arquitetura, não por promessa.</div>
+  <div><b>Local-first por natureza</b>Os dados clínicos vivem na máquina, não numa nuvem de terceiros: privacidade por arquitetura, não por promessa.</div>
 </div>
 
 <blockquote>Construído em par com IA e verificado a correr: antes de qualquer imagem desta
-página, o login, o motor de prioridades e os validadores passaram por testes reais — à
-maneira da casa, só se mostra o que aguenta verificação.</blockquote>
+página, o login, o motor de prioridades e os validadores passaram por testes reais. À maneira da casa, só se mostra o que aguenta verificação.</blockquote>
 
 <footer>
 Nascido em contexto académico (Engenharia Informática) e crescido como caso de estudo da casa.
