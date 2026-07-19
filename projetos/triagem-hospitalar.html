@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera &middot; KrakenAI</title>
+<meta name="description" content="Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
+<meta name="keywords" content="triagem hospitalar, Protocolo de Manchester, urgência, Java, SQLite, scrypt, RBAC, saúde, caso de estudo"/>
+<link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"/>
+<link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
+<link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera"/>
+<meta property="og:description" content="Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
+<meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html"/>
+<meta property="og:site_name" content="KrakenAI"/>
+<meta property="og:locale" content="pt_PT"/>
+<meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png"/>
+<meta name="twitter:title" content="Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera"/>
+<meta name="twitter:description" content="Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho."/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera",
+ "description": "Caso de estudo: sistema de gestão de urgência sobre o Protocolo de Manchester — admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho.",
+ "inLanguage": "pt-PT",
+ "url": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html",
+ "author": {"@type": "Organization", "name": "KrakenAI", "url": "https://luisacmarques2013-pixel.github.io/gravurak/index.html"},
+ "publisher": {"@type": "Organization", "name": "KrakenAI"}
+}
+</script>
+<style>
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+:root{--bg:#03100f;--teal:#2ee6c4;--cyan:#22d3ee;--gold:#e6c35a;--fg:#eafff9;
+  --dim:#8fc4ba;--line:rgba(46,230,196,.16);
+  --m-verm:#e11d48;--m-lar:#f97316;--m-ama:#eab308;--m-verde:#22c55e;--m-azul:#3b82f6}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  line-height:1.75;font-size:15px;
+  background:radial-gradient(900px 500px at 85% -10%,#0a3a36 0,transparent 55%),
+    url(https://luisacmarques2013-pixel.github.io/gravurak/assets/xisto-tile-fixo.svg) 0 0/400px 400px repeat,var(--bg)}
+.wrap{max-width:760px;margin:0 auto;padding:36px 22px 70px}
+a{color:var(--teal)} a:hover{color:var(--cyan)}
+header.site{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+.wordmark{height:34px;width:auto;display:block}
+.tagline{color:var(--dim);font-size:11px;letter-spacing:1px}
+.rascunho{border:1px dashed var(--gold);color:var(--gold);border-radius:8px;
+  padding:6px 12px;font-size:11.5px;letter-spacing:1.5px;display:inline-block;margin-bottom:22px}
+.eyebrow{color:var(--gold);font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:13px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 6px}
+h1{font-family:"Space Grotesk",system-ui,sans-serif;font-size:31px;line-height:1.18;
+  margin:0 0 14px;color:var(--fg);text-wrap:balance}
+h2{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;margin:40px 0 12px;color:var(--teal)}
+h3{font-size:15.5px;margin:20px 0 6px;color:var(--cyan);font-family:"Space Grotesk",system-ui,sans-serif}
+p.lead{font-size:16px;color:var(--fg)}
+p{margin:10px 0}
+.manchester{display:flex;gap:4px;margin:26px 0 8px}
+.manchester div{flex:1;height:8px;border-radius:4px}
+.manchester .v{background:var(--m-verm)}.manchester .l{background:var(--m-lar)}
+.manchester .a{background:var(--m-ama)}.manchester .g{background:var(--m-verde)}
+.manchester .z{background:var(--m-azul)}
+.mleg{display:flex;gap:4px;margin:0 0 4px;font-size:10.5px;color:var(--dim);text-align:center}
+.mleg span{flex:1}
+.mnote{color:var(--dim);font-size:12px;margin-top:2px}
+figure{margin:22px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:rgba(4,24,22,.5)}
+figure img{width:100%;display:block}
+figcaption{padding:10px 16px 12px;color:var(--dim);font-size:12.5px;border-top:1px solid var(--line)}
+figcaption b{color:var(--fg);font-weight:400}
+ol.circuito{list-style:none;padding:0;margin:14px 0;counter-reset:passo}
+ol.circuito li{position:relative;padding:0 0 18px 46px;counter-increment:passo}
+ol.circuito li::before{content:counter(passo);position:absolute;left:0;top:2px;
+  width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:14px;
+  color:var(--bg);background:var(--cor,var(--teal))}
+ol.circuito li:nth-child(1){--cor:var(--m-verm)}
+ol.circuito li:nth-child(2){--cor:var(--m-lar)}
+ol.circuito li:nth-child(3){--cor:var(--m-ama)}
+ol.circuito li:nth-child(4){--cor:var(--m-verde)}
+ol.circuito li:nth-child(5){--cor:var(--m-azul)}
+ol.circuito li b{color:var(--fg);font-family:"Space Grotesk",system-ui,sans-serif;font-size:15.5px}
+ol.circuito li span{color:var(--dim);font-size:13.5px;display:block;margin-top:2px}
+ul.mec{list-style:none;padding:0;margin:12px 0}
+ul.mec li{border-left:2px solid var(--line);padding:6px 0 6px 16px;margin:8px 0;font-size:13.5px;color:var(--dim)}
+ul.mec li b{color:var(--fg);font-weight:400}
+ul.mec code{background:#06201d;border-radius:4px;padding:1px 6px;font-size:.92em;color:var(--teal)}
+.poss{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.poss div{border:1px solid var(--line);border-radius:12px;padding:12px 15px;
+  background:rgba(4,24,22,.5);font-size:13px;color:var(--dim)}
+.poss div b{color:var(--fg);display:block;font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:14px;margin-bottom:4px;font-weight:400}
+@media (max-width:560px){.poss{grid-template-columns:1fr}}
+blockquote{border-left:2px solid var(--gold);margin:18px 0;padding:4px 16px;color:var(--dim)}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;
+  color:var(--dim);font-size:12px}
+footer a{color:var(--teal)}
+</style></head><body>
+<div class="wrap">
+<header class="site">
+  <a href="../index.html"><img class="wordmark" src="https://luisacmarques2013-pixel.github.io/gravurak/assets/krakenai-wordmark-dark.svg" alt="KrakenAI · gravurak" /></a>
+  <span class="tagline">gravado e verificado</span>
+</header>
+
+
+<p class="eyebrow">Caso de estudo · Informática ✕ Saúde</p>
+<h1>Triagem Hospitalar: uma urgência inteira, do balcão ao ecrã da sala de espera</h1>
+<p class="lead">Um sistema de gestão de urgência construído sobre o Protocolo de Manchester
+— o mesmo que ordena as urgências portuguesas. Duas disciplinas no mesmo desenho:
+a clínica dita as regras, a informática torna-as executáveis. Quem chega é admitido,
+triado por sintomas, ordenado por prioridade clínica e chamado ao consultório —
+e cada papel da equipa vê apenas o que lhe compete.</p>
+
+<div class="manchester"><div class="v"></div><div class="l"></div><div class="a"></div><div class="g"></div><div class="z"></div></div>
+<div class="mleg"><span>Emergente · imediato</span><span>Muito urgente · ≤10 min</span><span>Urgente · ≤60 min</span><span>Pouco urgente · ≤120 min</span><span>Não urgente · ≤240 min</span></div>
+<p class="mnote">As cinco cores de Manchester e os tempos-alvo de cada uma atravessam o sistema inteiro — da triagem ao painel da sala de espera.</p>
+
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/10-painel-publico.png" alt="Painel público da sala de espera: senha chamada, consultório, estado da urgência e tempos-alvo de Manchester" />
+  <figcaption><b>O painel da sala de espera, pensado para uma TV.</b> Senha chamada, consultório,
+  quantos aguardam — sem expor um único nome. A privacidade não foi um remendo: as senhas anónimas fazem parte do desenho.</figcaption>
+</figure>
+
+<h2>O circuito do utente</h2>
+<p>O sistema acompanha o episódio de urgência do princípio ao fim, com uma máquina de
+estados por trás: admitido → triado → em atendimento → desfecho.</p>
+<ol class="circuito">
+  <li><b>Admissão</b><span>Registo de chegada com validação de SNS. Entrada de emergência
+  dedicada para quem chega inconsciente ou sem identificação — o episódio abre primeiro,
+  a identidade resolve-se depois.</span></li>
+  <li><b>Triagem de enfermagem</b><span>Sintomas selecionáveis e sinais vitais (tensão,
+  frequência cardíaca, temperatura, SpO₂). A prioridade é calculada pelo motor de Manchester
+  — o enfermeiro confirma, não inventa.</span></li>
+  <li><b>Fila de espera</b><span>Ordenada por cor e hora, com contadores por prioridade e
+  tempos-alvo à vista. Atualiza sozinha a cada 30 segundos.</span></li>
+  <li><b>Painel do médico</b><span>«Chamar próximo» respeita a prioridade clínica, não a ordem
+  de chegada. Notas clínicas por episódio e encerramento com destino registado.</span></li>
+  <li><b>Sala de espera</b><span>O painel público fecha o ciclo: quem espera vê a senha e o
+  consultório, a equipa vê o estado da urgência.</span></li>
+</ol>
+
+<h2>Funções de retaguarda</h2>
+<ul class="mec">
+  <li><b>Gestão de utentes</b> — ficha, pesquisa, histórico de visitas e edição com validação.</li>
+  <li><b>Relatórios de gestão</b> — doentes por prioridade, tempo médio de espera e «saíram sem
+  ser vistos» (um indicador real de urgência), por intervalo de datas, com exportação CSV.</li>
+  <li><b>Gestão de utilizadores</b> — quatro perfis com acessos distintos: Admin, Médico,
+  Enfermeiro e Técnico. Cada um entra e vê apenas os seus painéis.</li>
+</ul>
+
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/03-admissao.png" alt="Ecrã de admissão de utentes com formulário de novo utente, lista de admitidos e botão de entrada de emergência" />
+  <figcaption><b>Admissão.</b> Novo utente à esquerda, admitidos a aguardar triagem à direita,
+  entrada de emergência sempre à mão.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/04-triagem.png" alt="Ecrã de triagem de enfermagem com fila de utentes a aguardar triagem" />
+  <figcaption><b>Triagem de enfermagem.</b> A fila de quem aguarda; duplo clique abre a ficha
+  de sintomas e sinais vitais.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/05-fila-espera.png" alt="Fila de espera da urgência com cartões das cinco prioridades de Manchester e episódios ordenados por cor" />
+  <figcaption><b>Fila de espera.</b> As cinco cores com contadores e tempos-alvo; cada episódio
+  com a sua faixa de prioridade.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/06-medico.png" alt="Painel do médico com fila de utentes triados, tempos de espera e ações de chamar e encerrar" />
+  <figcaption><b>Painel do médico.</b> Tempo de espera de cada utente à vista; «Chamar próximo»
+  segue a prioridade clínica.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/07-relatorios.png" alt="Ecrã de relatórios com doentes por prioridade num intervalo de datas e exportação CSV" />
+  <figcaption><b>Relatórios.</b> Indicadores por intervalo de datas, prontos a exportar
+  para CSV.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/08-utentes.png" alt="Gestão de utentes com tabela pesquisável, visitas e última visita" />
+  <figcaption><b>Utentes.</b> Pesquisa, contagem de visitas e acesso ao histórico
+  de cada episódio.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/09-utilizadores.png" alt="Gestão de utilizadores com criação de contas e perfis Admin, Médico, Enfermeiro e Técnico" />
+  <figcaption><b>Utilizadores.</b> Contas por número mecanográfico e perfil; as palavras-passe
+  nunca se guardam em claro.</figcaption>
+</figure>
+<figure>
+  <img src="https://luisacmarques2013-pixel.github.io/gravurak/assets/triagem/01-login.png" alt="Ecrã de login do Sistema de Triagem Hospitalar" />
+  <figcaption><b>Login.</b> Número mecanográfico e palavra-passe; o perfil decide o que se
+  vê lá dentro.</figcaption>
+</figure>
+
+<h2>Os mecanismos por baixo</h2>
+<ul class="mec">
+  <li><b>Arquitetura MVC com DAOs</b> — modelo, vista e controladores separados; o acesso a
+  dados isolado em <code>UtenteDAO</code> e <code>UtilizadorDAO</code>.</li>
+  <li><b>Duas bases de dados SQLite, de propósito</b> — credenciais num ficheiro, dados
+  clínicos noutro. Quem rouba um não leva o outro.</li>
+  <li><b>Palavras-passe com scrypt</b> — hash com sal, resistente a força-bruta; nunca em claro.</li>
+  <li><b>Máquina de estados do episódio</b> — <code>ADMITIDO → TRIADO → EM_ATENDIMENTO →
+  desfecho</code>; cada transição tem regras.</li>
+  <li><b>Motor de prioridades</b> — sintomas críticos puxam a cor para cima; a combinação
+  decide, não a opinião.</li>
+  <li><b>Validadores com dígito de controlo</b> — NIF, número de SNS e telefone verificados
+  matematicamente, não à vista.</li>
+  <li><b>Controlo de acessos por papel (RBAC)</b> — o perfil constrói a interface: um técnico
+  nunca vê o painel do médico.</li>
+</ul>
+
+<h2>Possibilidades</h2>
+<div class="poss">
+  <div><b>Multi-posto em rede</b>Admissão, triagem e gabinetes em máquinas diferentes sobre a
+  mesma base de dados — o desenho DAO já o permite.</div>
+  <div><b>TV real na sala de espera</b>O painel público já nasceu para ecrã grande; falta só
+  o cabo HDMI.</div>
+  <div><b>Indicadores para gestão</b>Tempos por cor, por turno, por época — os relatórios são
+  a semente de um painel de gestão de urgência.</div>
+  <div><b>Alertas de tempo-alvo</b>Um utente «urgente» a passar dos 60 minutos devia gritar
+  — o motor já sabe os tempos, falta o alarme.</div>
+  <div><b>Outras filas clínicas</b>Centros de saúde, clínicas privadas, veterinárias: onde
+  houver prioridade clínica e sala de espera, o circuito serve.</div>
+  <div><b>Local-first por natureza</b>Os dados clínicos vivem na máquina, não numa nuvem de
+  terceiros — privacidade por arquitetura, não por promessa.</div>
+</div>
+
+<blockquote>Construído em par com IA e verificado a correr: antes de qualquer imagem desta
+página, o login, o motor de prioridades e os validadores passaram por testes reais — à
+maneira da casa, só se mostra o que aguenta verificação.</blockquote>
+
+<footer>
+Nascido em contexto académico (Engenharia Informática) e crescido como caso de estudo da casa.
+Código disponível mediante pedido · Contacto: <a href="mailto:gravurak@zohomail.eu">gravurak@zohomail.eu</a>
+</footer>
+</div>
+</body></html>
