@@ -1,0 +1,124 @@
+{
+ "total": 17,
+ "posts": [
+  {
+   "t": "Um portefólio que responde: o agente público da montra",
+   "d": "Como a landing estática ganhou um vendedor 24/7: Sonnet num telemóvel, cache que trava antes de gastar, caretos adversariais e URL estável sem domínio.",
+   "m": "2026-07-19",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/um-portefolio-que-responde-o-agente-publico-da-montra.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Cadência adaptativa: quando acordar o modelo pago na revisão matinal",
+   "d": "Como cortámos custos de IA ao condicionar a execução do Opus à presença de obra nova ou deriva detetada, sem perder rigor na revisão diária.",
+   "m": "2026-07-17",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html",
+   "pilar": "soberania"
+  },
+  {
+   "t": "Como tornámos o ensemble de consultores num motor selecionável",
+   "d": "Registoumos o MoA no `_FNS` para fan-out paralelo via `clients.ask('conselho', ...)`. O funil, rag e estafeta ligam-se ao ensemble local sem custos cloud.",
+   "m": "2026-07-17",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/como-tornamos-o-ensemble-de-consultores-num-motor.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Estafeta em leque: fan-out com consolidação num turno único",
+   "d": "Arquitetura do /estafeta no Kraken OS: fan-out paralelo de agentes e relatório consolidado num único turno, com rastreabilidade intacta e rodapé honesto para...",
+   "m": "2026-07-17",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/estafeta-em-leque-fan-out-com-consolidacao-num-turno-unico.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "ponte_stream: corrida latente exposta por spawn lento",
+   "d": "Narrámos como um teste que falhou na v0.18 revelou uma corrida no helper de streaming e o que isso ensina sobre testes verdes em agentes paralelos.",
+   "m": "2026-07-16",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/ponte-stream-corrida-latente-exposta-por-spawn-lento-sob.html",
+   "pilar": "bastidores"
+  },
+  {
+   "t": "ORÁCULO: o terceiro campo que o nosso diário vai ganhar",
+   "d": "A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Um servidor, mil módulos: a arquitetura que sustenta o KrakenOS",
+   "d": "Trocar um processo por porta por um único servidor modular (porta 8755) reduziu a complexidade e tornou viável rodar agentes locais numa RTX doméstica.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "De bot que faz dinheiro a laboratório quant: o reframe do Forex v0",
+   "d": "Como mudámos o foco de “quanto rende?” para “isto sobrevive a custos e a um teste honesto?”, num template para validar hipóteses com agentes.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/de-bot-que-faz-dinheiro-a-laboratorio-quant-o-reframe-do-for.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "De scripts soltos a sistema: a convenção MODULE + handle()",
+   "d": "Como padronizar metadados e um handle() unificado transformou scripts dispersos num OS coerente, onde cada novo módulo cabe numa tarde.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Sharpe 0.78 no papel: quando a warroom local diz “ainda não”",
+   "d": "Como a warroom local detetou survivorship bias e custos de transação num Sharpe 0.78, antes que o entusiasmo inflacionasse os resultados do laboratório de ações.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html",
+   "pilar": "bastidores"
+  },
+  {
+   "t": "Memória de agentes: isolar fora da workspace para cortar loops",
+   "d": "Como alojámos a Epopeia fora da workspace indexada por RAG para cortar loops de auto-reforço em agentes autónomos e preservar contexto ativo.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/memoria-de-agentes-isolar-fora-da-workspace-para-cortar-loop.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Epona em Código: Porquê Dar Identidade Mítica a Agentes Locais",
+   "d": "Começámos o módulo Epona para testar se arquétipos definidos estabilizam agentes locais sem cloud. Analisamos o design, os riscos e o que falta validar.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/epona-em-codigo-porque-dar-identidade-mitica-a-agentes-locai.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Separar Facto de Leitura no Devlog de IA: Uma Prática Anti-Hype",
+   "d": "Como separamos facto de leitura nos devlogs do KrakenAI para manter transparência, evitar narrativas de marketing e documentar o desenvolvimento de agentes...",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html",
+   "pilar": "bastidores"
+  },
+  {
+   "t": "Esquemas de física em Typst: do prompt ao render sem retries",
+   "d": "Helpers locais em Typst para diagramas de corpo-livre e plano inclinado. Testados num problema real com zero retries. Asset aberto no GitHub.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html",
+   "pilar": "local-first"
+  },
+  {
+   "t": "Prova final com LLM: de PDF a correção sem alucinar",
+   "d": "O fluxo /provafinal converte um exame em PDF e devolve contas certas. Vemos como a deteção por pontuação fechou um desvio de cadeira que vazava formulários...",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html",
+   "pilar": "educacao"
+  },
+  {
+   "t": "Como o graphify tornou uma pasta solta num grafo de conhecimento",
+   "d": "A primeira corrida do graphify converteu 13 ficheiros num grafo navegável. Vê como escolhemos o Gemini free tier para extrair e poupámos tokens do Claude para a...",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html",
+   "pilar": "local-first"
+  },
+  {
+   "t": "Vigia tmux para bots no telemovel: auto-cura em <=60s",
+   "d": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao.",
+   "m": "2026-07-14",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html",
+   "pilar": "agentes"
+  }
+ ]
+}
