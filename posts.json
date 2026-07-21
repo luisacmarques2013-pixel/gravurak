@@ -1,5 +1,5 @@
 {
- "total": 18,
+ "total": 21,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,27 @@
   }
  ],
  "posts": [
+  {
+   "t": "Contratos de conclusão: declarar o que é ‘feito’ antes de agir",
+   "d": "Como a fila /trabalho/* do Kraken OS exige um contrato explícito com campos de pronto, provas e limites antes de gastar ciclos em agentes.",
+   "m": "2026-07-21",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Como travamos o gasto do modelo antes de perguntar ao agente",
+   "d": "O Agente da Montra ignora a pergunta se já foi respondida ou se excedeu os baldes de 15/h e 30/d. Assim evitamos faturas surpresa sem perder funcionalidade.",
+   "m": "2026-07-21",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Os caretos do vendedor: quando treinamos o agente para mentir",
+   "d": "Expusemos o Agente da Montra a nove cenários adversariais antes de publicar. Descrevemos a validação em disco e os erros reais do dia.",
+   "m": "2026-07-21",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html",
+   "pilar": "bastidores"
+  },
   {
    "t": "URL estável a partir de tunel efémero: proxy sem domínio próprio",
    "d": "Sem registo de domínio, desenhamos uma fachada que combina quick tunnel + worker de proxy + chave KV. O vigia tmux recria tudo em menos de um minuto se o...",

@@ -4,6 +4,27 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Contratos de conclusão: declarar o que é ‘feito’ antes de agir</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</guid>
+    <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
+    <description>Como a fila /trabalho/* do Kraken OS exige um contrato explícito com campos de pronto, provas e limites antes de gastar ciclos em agentes.</description>
+  </item>
+  <item>
+    <title>Como travamos o gasto do modelo antes de perguntar ao agente</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html</guid>
+    <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
+    <description>O Agente da Montra ignora a pergunta se já foi respondida ou se excedeu os baldes de 15/h e 30/d. Assim evitamos faturas surpresa sem perder funcionalidade.</description>
+  </item>
+  <item>
+    <title>Os caretos do vendedor: quando treinamos o agente para mentir</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</guid>
+    <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
+    <description>Expusemos o Agente da Montra a nove cenários adversariais antes de publicar. Descrevemos a validação em disco e os erros reais do dia.</description>
+  </item>
+  <item>
     <title>URL estável a partir de tunel efémero: proxy sem domínio próprio</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html</guid>
@@ -121,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html</guid>
     <pubDate>Tue, 14 Jul 2026 03:04:36 +0100</pubDate>
     <description>A primeira corrida do graphify converteu 13 ficheiros num grafo navegável. Vê como escolhemos o Gemini free tier para extrair e poupámos tokens do Claude para a...</description>
-  </item>
-  <item>
-    <title>Vigia tmux para bots no telemovel: auto-cura em &lt;=60s</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html</guid>
-    <pubDate>Tue, 14 Jul 2026 02:50:24 +0100</pubDate>
-    <description>Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao.</description>
   </item>
 </channel></rss>
