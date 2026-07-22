@@ -1,5 +1,5 @@
 {
- "total": 21,
+ "total": 22,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,13 @@
   }
  ],
  "posts": [
+  {
+   "t": "Drenagem do gateway antes de reiniciar sem perder trabalho ativo",
+   "d": "Padrão para a porta 8790 recusar entradas novas (503) e acabar o que está em curso durante restarts. Script, ciclo completo e porquê cura a queda do telemóvel na...",
+   "m": "2026-07-22",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html",
+   "pilar": "agentes"
+  },
   {
    "t": "Contratos de conclusão: declarar o que é ‘feito’ antes de agir",
    "d": "Como a fila /trabalho/* do Kraken OS exige um contrato explícito com campos de pronto, provas e limites antes de gastar ciclos em agentes.",

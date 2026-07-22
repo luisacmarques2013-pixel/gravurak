@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Drenagem do gateway antes de reiniciar sem perder trabalho ativo</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html</guid>
+    <pubDate>Wed, 22 Jul 2026 10:32:33 +0100</pubDate>
+    <description>Padrão para a porta 8790 recusar entradas novas (503) e acabar o que está em curso durante restarts. Script, ciclo completo e porquê cura a queda do telemóvel na...</description>
+  </item>
+  <item>
     <title>Contratos de conclusão: declarar o que é ‘feito’ antes de agir</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</guid>
@@ -135,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html</guid>
     <pubDate>Tue, 14 Jul 2026 03:21:34 +0100</pubDate>
     <description>O fluxo /provafinal converte um exame em PDF e devolve contas certas. Vemos como a deteção por pontuação fechou um desvio de cadeira que vazava formulários...</description>
-  </item>
-  <item>
-    <title>Como o graphify tornou uma pasta solta num grafo de conhecimento</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html</guid>
-    <pubDate>Tue, 14 Jul 2026 03:04:36 +0100</pubDate>
-    <description>A primeira corrida do graphify converteu 13 ficheiros num grafo navegável. Vê como escolhemos o Gemini free tier para extrair e poupámos tokens do Claude para a...</description>
   </item>
 </channel></rss>
