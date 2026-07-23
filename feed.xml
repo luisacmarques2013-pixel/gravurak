@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Nutrir o frágil: adotar open-source local sem perder soberania</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/nutrir-o-fragil-adotar-open-source-local-sem-perder-soberani.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/nutrir-o-fragil-adotar-open-source-local-sem-perder-soberani.html</guid>
+    <pubDate>Thu, 23 Jul 2026 10:32:37 +0100</pubDate>
+    <description>Descobre como integramos novos agentes open-source no Kraken OS sem abrir mão do controlo de dados, manutenção contínua e soberania digital.</description>
+  </item>
+  <item>
     <title>Drenagem do gateway antes de reiniciar sem perder trabalho ativo</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html</guid>
@@ -135,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html</guid>
     <pubDate>Tue, 14 Jul 2026 03:28:42 +0100</pubDate>
     <description>Helpers locais em Typst para diagramas de corpo-livre e plano inclinado. Testados num problema real com zero retries. Asset aberto no GitHub.</description>
-  </item>
-  <item>
-    <title>Prova final com LLM: de PDF a correção sem alucinar</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html</guid>
-    <pubDate>Tue, 14 Jul 2026 03:21:34 +0100</pubDate>
-    <description>O fluxo /provafinal converte um exame em PDF e devolve contas certas. Vemos como a deteção por pontuação fechou um desvio de cadeira que vazava formulários...</description>
   </item>
 </channel></rss>

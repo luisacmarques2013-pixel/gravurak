@@ -1,5 +1,5 @@
 {
- "total": 22,
+ "total": 23,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,13 @@
   }
  ],
  "posts": [
+  {
+   "t": "Nutrir o frágil: adotar open-source local sem perder soberania",
+   "d": "Descobre como integramos novos agentes open-source no Kraken OS sem abrir mão do controlo de dados, manutenção contínua e soberania digital.",
+   "m": "2026-07-23",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/nutrir-o-fragil-adotar-open-source-local-sem-perder-soberani.html",
+   "pilar": "soberania"
+  },
   {
    "t": "Drenagem do gateway antes de reiniciar sem perder trabalho ativo",
    "d": "Padrão para a porta 8790 recusar entradas novas (503) e acabar o que está em curso durante restarts. Script, ciclo completo e porquê cura a queda do telemóvel na...",
