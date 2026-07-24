@@ -4,6 +4,20 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Separar quem produz de quem julga: Investigador vs Claudia</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-quem-produz-de-quem-julga-investigador-vs-claudia.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-quem-produz-de-quem-julga-investigador-vs-claudia.html</guid>
+    <pubDate>Fri, 24 Jul 2026 10:33:37 +0100</pubDate>
+    <description>Descobre como separamos a voz que pesquisa papers da voz que os avalia no KrakenOS. Um digest destilado evita vieses em cascata em agentes locais.</description>
+  </item>
+  <item>
+    <title>Orquestração de motores locais no módulo Batedor</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/orquestrar-cinco-llms-locais-num-fluxo-de-agentes-autonomos.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/orquestrar-cinco-llms-locais-num-fluxo-de-agentes-autonomos.html</guid>
+    <pubDate>Fri, 24 Jul 2026 10:33:37 +0100</pubDate>
+    <description>Como organizámos um elenco fixo de motores (Qwen, Claudia, Ornith) no módulo Batedor para manter o raciocínio em casa, sem depender de cloud nem latência externa...</description>
+  </item>
+  <item>
     <title>Nutrir o frágil: adotar open-source local sem perder soberania</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/nutrir-o-fragil-adotar-open-source-local-sem-perder-soberani.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/nutrir-o-fragil-adotar-open-source-local-sem-perder-soberani.html</guid>
@@ -128,19 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/epona-em-codigo-porque-dar-identidade-mitica-a-agentes-locai.html</guid>
     <pubDate>Tue, 14 Jul 2026 03:34:38 +0100</pubDate>
     <description>Começámos o módulo Epona para testar se arquétipos definidos estabilizam agentes locais sem cloud. Analisamos o design, os riscos e o que falta validar.</description>
-  </item>
-  <item>
-    <title>Separar Facto de Leitura no Devlog de IA: Uma Prática Anti-Hype</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html</guid>
-    <pubDate>Tue, 14 Jul 2026 03:31:27 +0100</pubDate>
-    <description>Como separamos facto de leitura nos devlogs do KrakenAI para manter transparência, evitar narrativas de marketing e documentar o desenvolvimento de agentes...</description>
-  </item>
-  <item>
-    <title>Esquemas de física em Typst: do prompt ao render sem retries</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html</guid>
-    <pubDate>Tue, 14 Jul 2026 03:28:42 +0100</pubDate>
-    <description>Helpers locais em Typst para diagramas de corpo-livre e plano inclinado. Testados num problema real com zero retries. Asset aberto no GitHub.</description>
   </item>
 </channel></rss>

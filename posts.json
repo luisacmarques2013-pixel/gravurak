@@ -1,5 +1,5 @@
 {
- "total": 23,
+ "total": 25,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,20 @@
   }
  ],
  "posts": [
+  {
+   "t": "Separar quem produz de quem julga: Investigador vs Claudia",
+   "d": "Descobre como separamos a voz que pesquisa papers da voz que os avalia no KrakenOS. Um digest destilado evita vieses em cascata em agentes locais.",
+   "m": "2026-07-24",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-quem-produz-de-quem-julga-investigador-vs-claudia.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Orquestração de motores locais no módulo Batedor",
+   "d": "Como organizámos um elenco fixo de motores (Qwen, Claudia, Ornith) no módulo Batedor para manter o raciocínio em casa, sem depender de cloud nem latência externa...",
+   "m": "2026-07-24",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/orquestrar-cinco-llms-locais-num-fluxo-de-agentes-autonomos.html",
+   "pilar": "local-first"
+  },
   {
    "t": "Nutrir o frágil: adotar open-source local sem perder soberania",
    "d": "Descobre como integramos novos agentes open-source no Kraken OS sem abrir mão do controlo de dados, manutenção contínua e soberania digital.",
