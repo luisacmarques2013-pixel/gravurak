@@ -118,7 +118,7 @@
   },
   {
    "t": "ORÁCULO: o terceiro campo que o nosso diário vai ganhar",
-   "d": "A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu.",
+   "d": "A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais, e a lição do cansaço que a pariu.",
    "m": "2026-07-14",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html",
    "pilar": "agentes"
@@ -195,7 +195,7 @@
   },
   {
    "t": "Vigia tmux para bots no telemovel: auto-cura em <=60s",
-   "d": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao.",
+   "d": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo, e o bug da regex que matou a propria sessao.",
    "m": "2026-07-14",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html",
    "pilar": "agentes"

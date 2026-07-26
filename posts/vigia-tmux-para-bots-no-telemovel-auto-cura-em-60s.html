@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Vigia tmux para bots no telemovel: auto-cura em &lt;=60s &middot; KrakenAI</title>
-<meta name="description" content="Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao."/>
+<meta name="description" content="Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo, e o bug da regex que matou a propria sessao."/>
 <meta name="keywords" content="vigia tmux, auto-cura bots termux, agente local sem cloud, arranque automatico sshd, regex ancorada, bot android headless"/>
 <link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html"/>
 <link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
 <link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Vigia tmux para bots no telemovel: auto-cura em &lt;=60s"/>
-<meta property="og:description" content="Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao."/>
+<meta property="og:description" content="Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo, e o bug da regex que matou a propria sessao."/>
 <meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html"/>
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
@@ -21,13 +21,13 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
 <meta name="twitter:title" content="Vigia tmux para bots no telemovel: auto-cura em &lt;=60s"/>
-<meta name="twitter:description" content="Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao."/>
+<meta name="twitter:description" content="Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo, e o bug da regex que matou a propria sessao."/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "BlogPosting",
  "headline": "Vigia tmux para bots no telemovel: auto-cura em <=60s",
- "description": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao.",
+ "description": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo, e o bug da regex que matou a propria sessao.",
  "inLanguage": "pt-PT",
  "datePublished": "2026-07-14T02:50:24+01:00",
  "dateModified": "2026-07-14T02:50:24+01:00",
@@ -121,7 +121,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <h2>TL;DR</h2>
 <ul><li>Construímos um sistema de auto-cura em três camadas para o bot da Sofia no Termux: vigia tmux que ressuscita o processo em &lt;=60s, arranque automático do sshd e do vigia ao abrir a app, e boot nativo via Termux:Boot.</li><li>O bug mais caro nasceu de uma regex não ancorada que matava a própria sessão tmux ao encontrar o comando da sessão no argv. Uma ancora no fim da linha resolveu o problema.</li><li>Serviços "sempre ligados" num telemovel exigem testes destrutivos: só se prova que funciona quando se mata o processo de propósito e se observa o retorno.</li></ul>
 <h2>O problema: um bot que desliga quando o telemovel reinicia</h2>
-<p>A Sofia corre no telemovel, dentro do Termux. Até aqui, tudo bem. Mas cada reboot do telemovel matava a cadeia de dependências: o sshd parava, a sessão tmux perdia-se e era preciso um ritual manual para a voltar a fazer funcionar. No dia 13 de julho, às 03:06, o telemovel reiniciou sozinho e o Termux:Boot levantou tudo em automático — exceto o Tailscale. Aprendeu-se que o Tailscale morto não derruba a Sofia: o Telegram sai pela rede normal e o bot continua a responder. O que faltava era garantir que cada camada voltava sem intervenção humana, independentemente do estado da VPN.</p>
+<p>A Sofia corre no telemovel, dentro do Termux. Até aqui, tudo bem. Mas cada reboot do telemovel matava a cadeia de dependências: o sshd parava, a sessão tmux perdia-se e era preciso um ritual manual para a voltar a fazer funcionar. No dia 13 de julho, às 03:06, o telemovel reiniciou sozinho e o Termux:Boot levantou tudo em automático, exceto o Tailscale. Aprendeu-se que o Tailscale morto não derruba a Sofia: o Telegram sai pela rede normal e o bot continua a responder. O que faltava era garantir que cada camada voltava sem intervenção humana, independentemente do estado da VPN.</p>
 <h2>As três camadas de auto-cura</h2>
 <p>Dividimos a recuperação em três níveis, cada um com gatilho próprio:</p>
 <ol><li>Vigia dentro de tmux: monitoriza o processo principal e relança-o em &lt;=60s se morrer. Testado matando o bot de propósito; o retorno foi consistente.</li><li>Auto-arranque do sshd + vigia ao abrir a app: acabou com o ritual manual do "dar sshd". O Termux arranca o serviço e o monitor em paralelo assim que a interface é tocada.</li><li>Boot nativo via Termux:Boot: para reinícios reais, não apenas suspensões. O sistema operativo chama o script de arranque sem pedir permissão ao utilizador.</li></ol>
@@ -134,7 +134,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <h3>Como se prova que um vigia destes funciona?</h3>
 <p>Matando o bot de propósito e vendo-o voltar: no nosso teste o processo foi relançado em menos de 60 segundos. Um teste que nunca perturba o sistema não prova nada.</p>
 <h3>O que acontece se a VPN (Tailscale) não voltar depois de um reboot?</h3>
-<p>Foi o que aconteceu no reboot real das 03:06: tudo voltou menos o Tailscale — e a Sofia continuou a responder, porque o Telegram sai pela rede normal, sem depender da VPN.</p>
+<p>Foi o que aconteceu no reboot real das 03:06: tudo voltou menos o Tailscale, e a Sofia continuou a responder, porque o Telegram sai pela rede normal, sem depender da VPN.</p>
 <h3>Porque é que uma regex precisa de âncora num vigia?</h3>
 <p>Sem âncora, o padrão casava com o argv do próprio servidor tmux (que guarda o comando da sessão) e o vigia matava a casa toda. A âncora no fim da linha restringe a correspondência ao processo certo.</p>
 <div class="tags"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#agentes">#agentes</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#automacao">#automacao</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#termux">#termux</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#resiliencia">#resiliencia</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#devlog">#devlog</a></div>
