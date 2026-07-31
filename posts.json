@@ -1,5 +1,5 @@
 {
- "total": 25,
+ "total": 27,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,20 @@
   }
  ],
  "posts": [
+  {
+   "t": "Como poupar tokens em PDFs com leitura em duas fases",
+   "d": "Decodificar material académico sem queimar API: o padrão de leitura híbrida que separa texto extraível de diagramas antes de chamar a visão artificial.",
+   "m": "2026-07-31",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/como-poupar-tokens-em-pdfs-com-leitura-em-duas-fases.html",
+   "pilar": "local-first"
+  },
+  {
+   "t": "Quando é que um grafo de workspace vale a pena construir?",
+   "d": "Sabe quando é que um grafo de navegação vale a pena? Descobre o critério exato e a corrida do graphify que provou o limiar entre pasta bruta e memória estruturada.",
+   "m": "2026-07-31",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/quando-e-que-um-grafo-de-workspace-vale-a-pena-construir.html",
+   "pilar": "bastidores"
+  },
   {
    "t": "Separar quem produz de quem julga: Investigador vs Claudia",
    "d": "Descobre como separamos a voz que pesquisa papers da voz que os avalia no KrakenOS. Um digest destilado evita vieses em cascata em agentes locais.",
@@ -118,7 +132,7 @@
   },
   {
    "t": "ORÁCULO: o terceiro campo que o nosso diário vai ganhar",
-   "d": "A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais, e a lição do cansaço que a pariu.",
+   "d": "A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu.",
    "m": "2026-07-14",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html",
    "pilar": "agentes"
@@ -195,7 +209,7 @@
   },
   {
    "t": "Vigia tmux para bots no telemovel: auto-cura em <=60s",
-   "d": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo, e o bug da regex que matou a propria sessao.",
+   "d": "Como construimos um bot que morre e volta sozinho num Termux: vigia tmux, arranque automatico do sshd e boot nativo — e o bug da regex que matou a propria sessao.",
    "m": "2026-07-14",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html",
    "pilar": "agentes"
