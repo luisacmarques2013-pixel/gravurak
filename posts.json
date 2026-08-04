@@ -1,5 +1,5 @@
 {
- "total": 27,
+ "total": 28,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,13 @@
   }
  ],
  "posts": [
+  {
+   "t": "Renderizar diagramas localmente sem depender de CDNs",
+   "d": "Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação...",
+   "m": "2026-08-04",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html",
+   "pilar": "soberania"
+  },
   {
    "t": "Como poupar tokens em PDFs com leitura em duas fases",
    "d": "Decodificar material académico sem queimar API: o padrão de leitura híbrida que separa texto extraível de diagramas antes de chamar a visão artificial.",

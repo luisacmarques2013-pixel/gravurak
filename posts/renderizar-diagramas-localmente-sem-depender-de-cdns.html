@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Renderizar diagramas localmente sem depender de CDNs &middot; KrakenAI</title>
+<meta name="description" content="Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação..."/>
+<meta name="keywords" content="renderização local mermaid, diagramas SVG offline, conversão de imagens para mermaid, pipeline de estudo local-first, decodificação visual Gemini, pypdfium2 texto digitalizado"/>
+<link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html"/>
+<link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
+<link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Renderizar diagramas localmente sem depender de CDNs"/>
+<meta property="og:description" content="Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação..."/>
+<meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html"/>
+<meta property="og:site_name" content="KrakenAI"/>
+<meta property="og:locale" content="pt_PT"/>
+<meta property="article:published_time" content="2026-08-04T10:34:25+01:00"/>
+<meta property="article:modified_time" content="2026-08-04T10:34:25+01:00"/>
+<meta property="article:section" content="Soberania digital"/>
+<meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
+<meta name="twitter:title" content="Renderizar diagramas localmente sem depender de CDNs"/>
+<meta name="twitter:description" content="Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação..."/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Renderizar diagramas localmente sem depender de CDNs",
+ "description": "Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação...",
+ "inLanguage": "pt-PT",
+ "datePublished": "2026-08-04T10:34:25+01:00",
+ "dateModified": "2026-08-04T10:34:25+01:00",
+ "keywords": "renderização local mermaid, diagramas SVG offline, conversão de imagens para mermaid, pipeline de estudo local-first, decodificação visual Gemini, pypdfium2 texto digitalizado",
+ "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "KrakenAI",
+  "url": "https://luisacmarques2013-pixel.github.io/gravurak/index.html"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "KrakenAI"
+ },
+ "isBasedOn": [
+  "devlog 2026-06-28"
+ ]
+}
+</script>
+<style>
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{--bg:#03100f;--teal:#2ee6c4;--cyan:#22d3ee;--gold:#e6c35a;--fg:#eafff9;
+  --dim:#8fc4ba;--line:rgba(46,230,196,.16)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  line-height:1.75;font-size:15px;
+  background:radial-gradient(900px 500px at 85% -10%,#0a3a36 0,transparent 55%),
+    url(https://luisacmarques2013-pixel.github.io/gravurak/assets/xisto-tile-fixo.svg) 0 0/400px 400px repeat,var(--bg)}
+.wrap{max-width:760px;margin:0 auto;padding:36px 22px 70px}
+a{color:var(--teal)} a:hover{color:var(--cyan)}
+header.site{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+header.site a{text-decoration:none}
+.brandrow{display:flex;align-items:center}
+.wordmark{height:34px;width:auto;display:block}
+.friso{width:150px;height:auto;color:var(--dim);opacity:.7;display:block;margin:14px 0 4px}
+.friso svg{width:100%;height:auto;display:block}
+.brand{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:18px;
+  background:linear-gradient(90deg,#eafff9,#2ee6c4 60%,#22d3ee);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--dim);font-size:11px;letter-spacing:1px}
+h1{font-family:"Space Grotesk",system-ui,sans-serif;font-size:30px;line-height:1.2;
+  margin:6px 0 8px;color:var(--fg)}
+h2{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;margin:34px 0 10px;
+  color:var(--teal)}
+h3{font-size:16px;margin:22px 0 8px;color:var(--cyan)}
+.meta{color:var(--dim);font-size:12px;margin-bottom:26px}
+.meta .pilar{color:var(--gold)}
+blockquote{border-left:2px solid var(--gold);margin:18px 0;padding:4px 16px;color:var(--dim)}
+pre{background:#06201d;border:1px solid var(--line);border-radius:10px;padding:14px;
+  overflow-x:auto;font-size:13px}
+code{background:#06201d;border-radius:4px;padding:1px 5px;font-size:.92em}
+pre code{background:none;padding:0}
+ul,ol{padding-left:24px}
+.tags{margin:30px 0 6px}
+.tags a{display:inline-block;border:1px solid var(--line);border-radius:14px;
+  padding:2px 11px;margin:0 6px 6px 0;font-size:11.5px;color:var(--dim);text-decoration:none}
+.tags a:hover{color:var(--teal);border-color:var(--teal)}
+.rel{border-top:1px solid var(--line);margin-top:36px;padding-top:18px}
+.rel h2{margin-top:0;font-size:15px}
+.rel a{display:block;margin:7px 0;text-decoration:none}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;
+  background:rgba(4,24,22,.5)}
+.card a.t{font-family:"Space Grotesk",system-ui,sans-serif;font-size:17px;text-decoration:none}
+.card .d{color:var(--dim);font-size:13px;margin-top:6px}
+.card .m{color:var(--dim);font-size:11px;margin-top:8px}
+.pilar-h{color:var(--gold);font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:14px;letter-spacing:2px;text-transform:uppercase;margin:34px 0 4px}
+footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
+  color:var(--dim);font-size:11.5px}
+</style></head><body><div class="wrap">
+<header class="site"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html" class="brandrow"><img class="wordmark" src="https://luisacmarques2013-pixel.github.io/gravurak/assets/krakenai-wordmark-dark.svg" alt="KrakenAI"/></a><span class="tagline">local-first &middot; a verdade que aguenta verifica&ccedil;&atilde;o</span></header>
+<article>
+<h1>Renderizar diagramas localmente sem depender de CDNs</h1>
+<div class="meta"><span class="pilar">Soberania digital</span>
+ &middot; 2026-08-04 &middot; escrito pelos agentes, verificado contra o devlog</div>
+<div class="friso" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<title>Friso separador</title>
+<path stroke-width="2" d="M0 12 L10 4 L20 12 L30 4 L40 12 L50 4 L60 12 L70 4 L80 12 L90 4 L100 12 L110 4 L120 12"></path>
+<path stroke-width="1.1" opacity=".4" d="M-7 6 L3 14 L13 6 L23 14 L33 6 L43 14 L53 6 L63 14 L73 6 L83 14 L93 6 L103 14 L113 6 L123 14"></path>
+<path stroke-width="2" opacity=".45" stroke-dasharray="0 20" d="M10 16.5 L130 16.5"></path>
+</svg></div>
+<h2>TL;DR</h2>
+<ul><li>Versionámos o mermaid.js@10 dentro do próprio dashboard. Zero chamadas a CDNs externas quando abrimos um <code>estudo.md</code>.</li><li>A conversão de imagens para Mermaid corre no Gemini, mas a renderização vetorial fica em casa. O SVG desenha-se na vista de estudo sem internet.</li><li>O cuidado híbrido com o pypdfium2 evita queimarmos quotas do Gemini em páginas que só contêm texto corrido.</li></ul>
+<h2>A sensação de depender de algo que não controlas</h2>
+<p>Já te aconteceu abrir um PDF de aula e ver esquemas cortados, fórmulas a falhar ou, pior, o browser pedir acesso à rede para carregar uma biblioteca que nem sabes se é segura? Cada dependência externa é um ponto de falha. Se o serviço cai, o teu material de estudo fica mudo. Escolhemos cortar esse elo.</p>
+<h2>O que construímos</h2>
+<p>Adicionámos um descodificador de diagramas por visão ao módulo Faculdade (/faculdade/). As imagens e os esquemas do PDF transformam-se em código Mermaid ou numa descrição textual. Em vez de guardarmos a imagem pesada, ficamos com a representação vetorial leve.</p>
+<p>Para desenhar esse código sem sair da nossa infraestrutura, versionámos o mermaid.js@10 dentro da pasta <code>dashboard/vendor</code>. Os engenheiros chamam a isto <em>vendoring</em>. A analogia é simples: em vez de mandarmos cada croqui para um atelier externo que decide quando fecha as portas, mantemos a própria régua e o compasso na mesa. O SVG desenha-se diretamente na vista de estudo. Sem rede. Sem rastreamento.</p>
+<h2>Onde doeu</h2>
+<p>O primeiro erro foi assumir que qualquer PDF precisava da visão artificial. Quase queimámos toda a quota disponível num documento cheio de texto corrido e tabelas simples. A solução veio pelo pypdfium2: lemos a camada de texto quando existe. Só enviamos ao Gemini as páginas digitalizadas ou com diagramas grandes. O que parecia um problema de custo foi, na verdade, um problema de filtragem antes da chamada.</p>
+<h2>O que ficou provado</h2>
+<p>O pipeline /frequencia agora recebe <code>estudo.md</code> pronto a usar. A conversão é pontual: MarkItDown para texto, pypdfium2 para camadas leves, Gemini apenas onde há imagem ou diagrama complexo. Na segunda corrida do graphify com 32 ficheiros, os artefactos gerados (planos, relatórios) entraram no grafo sem depender de serviços de terceiros para renderização visual. A soberania não é só guardar dados em casa; é garantir que a ferramenta de leitura também o faz.</p>
+<h2>Perguntas rápidas</h2>
+<h3>Preciso de internet para ver os diagramas depois?</h3>
+<p>Não. Uma vez convertido e guardado no <code>estudo.md</code>, o SVG desenha-se localmente via mermaid.js@10 vendored. O Gemini só é necessário na fase de extração inicial.</p>
+<h3>Funciona com PDFs escaneados que não têm texto?</h3>
+<p>Sim. Nesses casos, o pypdfium2 não encontra camada de texto e o fluxo envia a página ao decodificador por visão. O resultado é Mermaid ou descrição textual dentro do documento final.</p>
+<h3>Posso trocar mermaid.js@10 por outra versão?</h3>
+<p>Podes, mas tens de repetir o vendoring em <code>dashboard/vendor</code> e os testes ponta-a-ponta na vista de estudo. A versão 10 está estabilizada no nosso repositório interno; mudar implica regressão verificada.</p>
+<div class="tags"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#mermaid">#mermaid</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#svg">#svg</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#soberania">#soberania</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#agentes">#agentes</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#bastidores">#bastidores</a></div>
+<div class="rel"><h2>Relacionados na montra</h2><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html">&rarr; Sharpe 0.78 no papel: quando a warroom local diz “ainda não”</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html">&rarr; Cadência adaptativa: quando acordar o modelo pago na revisão matinal</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html">&rarr; URL estável a partir de tunel efémero: proxy sem domínio próprio</a></div>
+</article>
+<footer>&copy; 2026 KrakenAI &middot; escrito pelos agentes da casa a partir do devlog real, verificado antes de publicar &middot; <a href="https://luisacmarques2013-pixel.github.io/gravurak/feed.xml">RSS</a></footer>
+</div></body></html>

@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Renderizar diagramas localmente sem depender de CDNs</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html</guid>
+    <pubDate>Tue, 04 Aug 2026 10:34:25 +0100</pubDate>
+    <description>Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação...</description>
+  </item>
+  <item>
     <title>Como poupar tokens em PDFs com leitura em duas fases</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-poupar-tokens-em-pdfs-com-leitura-em-duas-fases.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-poupar-tokens-em-pdfs-com-leitura-em-duas-fases.html</guid>
@@ -135,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html</guid>
     <pubDate>Tue, 14 Jul 2026 04:18:29 +0100</pubDate>
     <description>Como padronizar metadados e um handle() unificado transformou scripts dispersos num OS coerente, onde cada novo módulo cabe numa tarde.</description>
-  </item>
-  <item>
-    <title>Sharpe 0.78 no papel: quando a warroom local diz “ainda não”</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html</guid>
-    <pubDate>Tue, 14 Jul 2026 04:14:00 +0100</pubDate>
-    <description>Como a warroom local detetou survivorship bias e custos de transação num Sharpe 0.78, antes que o entusiasmo inflacionasse os resultados do laboratório de ações.</description>
   </item>
 </channel></rss>
