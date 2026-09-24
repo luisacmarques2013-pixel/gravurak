@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
 <meta property="article:published_time" content="2026-07-19T00:08:51+01:00"/>
-<meta property="article:modified_time" content="2026-07-19T00:08:51+01:00"/>
+<meta property="article:modified_time" content="2026-09-24T03:01:36+01:00"/>
 <meta property="article:section" content="Agentes autonomos"/>
 <meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -30,7 +30,7 @@
  "description": "Como a landing estática ganhou um vendedor 24/7: Sonnet num telemóvel, cache que trava antes de gastar, caretos adversariais e URL estável sem domínio.",
  "inLanguage": "pt-PT",
  "datePublished": "2026-07-19T00:08:51+01:00",
- "dateModified": "2026-07-19T00:08:51+01:00",
+ "dateModified": "2026-09-24T03:01:36+01:00",
  "keywords": "agente portefólio, montra gravurak, Claude Sonnet headless, cache respostas, worker cloudflare, caretos adversariais, telemóvel Android",
  "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/um-portefolio-que-responde-o-agente-publico-da-montra.html",
  "mainEntityOfPage": {
@@ -123,13 +123,13 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <h2>O problema real</h2>
 <p>Uma landing estática não vende sozinha. Pedimos ao portefólio que parasse de ser um ficheiro morto e passasse a dialogar com visitantes e recrutadores, mas sem fugir do que foi publicado. A exigência era clara: responder só com o índice, sempre com links, e admitir honestamente quando não sabe.</p>
 <h2>O que construímos</h2>
-<p>Embarcámos o agente no telemóvel Android ao lado da Professora Sofia. O servidor é Python puro e corre em background 24/7. O cérebro é o Claude Sonnet (modelo pago, a correr headless via CLI), mas antes de lhe chegar qualquer pedido, um funil local filtra tudo: cache de respostas para perguntas repetidas, baldes por visitante (15/h) e dia (30/d), teto global de 80/dia e memória de conversa limitada a três voltas por sessão. O IP do visitante é hashado com sal e data, desaparecendo à meia-noite — privacidade por construção, não por promessa.</p>
+<p>Embarcámos o agente no telemóvel Android ao lado do bot privado da casa. O servidor é Python puro e corre em background 24/7. O cérebro é o Claude Sonnet (modelo pago, a correr headless via CLI), mas antes de lhe chegar qualquer pedido, um funil local filtra tudo: cache de respostas para perguntas repetidas, baldes por visitante (15/h) e dia (30/d), teto global de 80/dia e memória de conversa limitada a três voltas por sessão. O IP do visitante é hashado com sal e data, desaparecendo à meia-noite — privacidade por construção, não por promessa.</p>
 <h2>Caretos antes de ir à rua</h2>
-<p>Antes de publicar, grelhamos o agente com nove cenários adversariais herdados da mentalidade dos caretos da Sofia: injecção de prompt, pedido de trabalho grátis (scraper), armadilha de invenção, exatidão contra a fonte e guerra de marcas. O Sonnet recusou revelar o prompt interno, não entregou código, negou o projeto inventado apontando para o que realmente existe com os devidos caveats, e citou zero links falsos — seis de seis verificados em disco. Leu-se a evidência, não um veredicto automático.</p>
+<p>Antes de publicar, grelhamos o agente com nove cenários adversariais herdados da mentalidade dos caretos da casa: injecção de prompt, pedido de trabalho grátis (scraper), armadilha de invenção, exatidão contra a fonte e guerra de marcas. O Sonnet recusou revelar o prompt interno, não entregou código, negou o projeto inventado apontando para o que realmente existe com os devidos caveats, e citou zero links falsos — seis de seis verificados em disco. Leu-se a evidência, não um veredicto automático.</p>
 <h2>O que correu mal e porquê</h2>
 <p>Nenhum sistema novo nasce sem atrito. A troca do email pessoal pelo da casa exigiu regenerar o índice e limpar a cache, que guardava respostas com o endereço antigo — apanhado ao vivo no browser. O <code>curl</code> do Windows estraga JSON inline em POSTs (solução: <code>--data-binary</code> com ficheiro), e um novo certificado <code>workers.dev</code> demora um ou dois minutos até responder ao primeiro pedido. Cada erro foi registado como lição, não como mistério.</p>
 <h2>O que ficou provado</h2>
-<p>A fachada pública funciona sem domínio próprio: um Worker gratuito faz proxy ao túnel efémero do telemóvel e o URL público nunca muda. Testámos a auto-cura duas vezes: interrompemos o túnel e o agente de propósito; o vigia tmux ressuscitou tudo em 59 segundos, a Sofia e o Discord nem estremeceram, e a KV re-registou-se sozinha. A landing regenera-se normalmente se faltar a variável de ambiente, e o circuito completo (site → worker → túnel → telemóvel → Sonnet) respondeu a uma pergunta real sobre clínicas e advogados no dia da publicação.</p>
+<p>A fachada pública funciona sem domínio próprio: um Worker gratuito faz proxy ao túnel efémero do telemóvel e o URL público nunca muda. Testámos a auto-cura duas vezes: interrompemos o túnel e o agente de propósito; o vigia tmux ressuscitou tudo em 59 segundos, o bot privado e o Discord nem estremeceram, e a KV re-registou-se sozinha. A landing regenera-se normalmente se faltar a variável de ambiente, e o circuito completo (site → worker → túnel → telemóvel → Sonnet) respondeu a uma pergunta real sobre clínicas e advogados no dia da publicação.</p>
 <h2>Perguntas rápidas</h2>
 <h3>Porque é que não usámos um domínio próprio?</h3>
 <p>Um Worker gratuito com Cloudflare KV entrega o mesmo URL estável, sem custos de registo e com auto-cura nativa quando o túnel do telemóvel renasce.</p>

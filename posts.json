@@ -1,5 +1,5 @@
 {
- "total": 28,
+ "total": 27,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -10,17 +10,6 @@
     "t": "Confere: every transaction with its document",
     "d": "Bank statement reconciliation against invoices and receipts: intake by Telegram, email or a watched folder, extraction via tax QR codes, OCR and local AI vision, exact matching in integer cents and a report ready for the accountant.",
     "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html"
-   }
-  },
-  {
-   "t": "Professora Sofia: estudar com o material do professor e com as nossas anotações",
-   "d": "O que é a tutora da turma, o que faz e o que não faz, e para que serve o modo prova final: aprendizagem aumentada com o material do professor, sem trabalhos feitos por ninguém. Escrito para colegas e professores.",
-   "m": "2026-09-24",
-   "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/professora-sofia.html",
-   "en": {
-    "t": "Professora Sofia: studying with the lecturer's material and our own notes",
-    "d": "What the class tutor is, what she does and does not do, and what the final exam mode is for: augmented learning grounded in the lecturer's material, with no assignments done for anyone. Written for classmates and lecturers.",
-    "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/professora-sofia.html"
    }
   },
   {
@@ -210,13 +199,6 @@
    "m": "2026-07-14",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html",
    "pilar": "local-first"
-  },
-  {
-   "t": "Modo prova final: obrigar o modelo a mostrar a resolução inteira de uma prova antiga",
-   "d": "O modo prova final da Sofia obriga o modelo a ler fotos de uma prova antiga, aplicar o método do professor e tipografar a resolução inteira. É estudo, não correção.",
-   "m": "2026-07-14",
-   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/modo-prova-final-obrigar-o-modelo-a-mostrar-a-resolucao.html",
-   "pilar": "educacao"
   },
   {
    "t": "Como o graphify tornou uma pasta solta num grafo de conhecimento",

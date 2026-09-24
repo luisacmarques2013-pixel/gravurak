@@ -3,8 +3,6 @@
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/index.html</loc></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/projetos/confere.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/confere.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/projetos/professora-sofia.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/professora-sofia.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/triagem-hospitalar.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html</loc><lastmod>2026-08-04</lastmod></url>
@@ -16,9 +14,9 @@
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html</loc><lastmod>2026-07-22</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</loc><lastmod>2026-07-21</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html</loc><lastmod>2026-07-21</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</loc><lastmod>2026-07-21</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html</loc><lastmod>2026-07-19</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-portefolio-que-responde-o-agente-publico-da-montra.html</loc><lastmod>2026-07-19</lastmod></url>
+  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-portefolio-que-responde-o-agente-publico-da-montra.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html</loc><lastmod>2026-07-17</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-tornamos-o-ensemble-de-consultores-num-motor.html</loc><lastmod>2026-07-17</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/estafeta-em-leque-fan-out-com-consolidacao-num-turno-unico.html</loc><lastmod>2026-07-17</lastmod></url>
@@ -30,9 +28,8 @@
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/sharpe-0-78-no-papel-quando-a-warroom-local-diz-ainda-nao.html</loc><lastmod>2026-07-14</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/memoria-de-agentes-isolar-fora-da-workspace-para-cortar-loop.html</loc><lastmod>2026-07-14</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/epona-em-codigo-porque-dar-identidade-mitica-a-agentes-locai.html</loc><lastmod>2026-07-14</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/separar-facto-de-leitura-no-devlog-de-ia-uma-pratica-anti-hy.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html</loc><lastmod>2026-07-14</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/modo-prova-final-obrigar-o-modelo-a-mostrar-a-resolucao.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-o-graphify-tornou-uma-pasta-solta-num-grafo-de-conhecim.html</loc><lastmod>2026-07-14</lastmod></url>
-  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://luisacmarques2013-pixel.github.io/gravurak/posts/vigia-tmux-para-bots-no-telemovel-auto-cura-em-60s.html</loc><lastmod>2026-09-24</lastmod></url>
 </urlset>
