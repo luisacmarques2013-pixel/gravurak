@@ -4,7 +4,7 @@
   {
    "t": "Confere: cada movimento com o seu documento",
    "d": "Reconciliação de extratos bancários com faturas e recibos: entrada por Telegram, email ou pasta vigiada, extração por QR da AT, OCR e visão por IA local, cruzamento exato em cêntimos e relatório pronto para o contabilista.",
-   "m": "2026-07-19",
+   "m": "2026-09-24",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/confere.html",
    "en": {
     "t": "Confere: every transaction with its document",
@@ -13,9 +13,20 @@
    }
   },
   {
+   "t": "Professora Sofia: estudar com o material do professor e com as nossas anotações",
+   "d": "O que é a tutora da turma, o que faz e o que não faz, e para que serve o modo prova final: aprendizagem aumentada com o material do professor, sem trabalhos feitos por ninguém. Escrito para colegas e professores.",
+   "m": "2026-09-24",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/professora-sofia.html",
+   "en": {
+    "t": "Professora Sofia: studying with the lecturer's material and our own notes",
+    "d": "What the class tutor is, what she does and does not do, and what the final exam mode is for: augmented learning grounded in the lecturer's material, with no assignments done for anyone. Written for classmates and lecturers.",
+    "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/en/professora-sofia.html"
+   }
+  },
+  {
    "t": "Triagem Hospitalar: uma urgência inteira, do balcão à sala de espera",
    "d": "Sistema de gestão de urgência sobre o Protocolo de Manchester: admissão, triagem por sintomas, fila por prioridade clínica, painel do médico e sala de espera. Informática e saúde no mesmo desenho.",
-   "m": "2026-07-19",
+   "m": "2026-09-24",
    "u": "https://luisacmarques2013-pixel.github.io/gravurak/projetos/triagem-hospitalar.html",
    "en": {
     "t": "Hospital Triage: a full emergency flow, from the front desk to the waiting-room screen",
@@ -201,10 +212,10 @@
    "pilar": "local-first"
   },
   {
-   "t": "Prova final com LLM: de PDF a correção sem alucinar",
-   "d": "O fluxo /provafinal converte um exame em PDF e devolve contas certas. Vemos como a deteção por pontuação fechou um desvio de cadeira que vazava formulários...",
+   "t": "Modo prova final: obrigar o modelo a mostrar a resolução inteira de uma prova antiga",
+   "d": "O modo prova final da Sofia obriga o modelo a ler fotos de uma prova antiga, aplicar o método do professor e tipografar a resolução inteira. É estudo, não correção.",
    "m": "2026-07-14",
-   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/prova-final-com-llm-de-pdf-a-correcao-sem-alucinar.html",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/modo-prova-final-obrigar-o-modelo-a-mostrar-a-resolucao.html",
    "pilar": "educacao"
   },
   {
