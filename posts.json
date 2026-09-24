@@ -1,5 +1,5 @@
 {
- "total": 27,
+ "total": 28,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,13 @@
   }
  ],
  "posts": [
+  {
+   "t": "Automatizar tabelas e listas de pinos no simulador caseiro",
+   "d": "Geramos tabelas de verdade e listas de fios diretamente do modelo de simulação digital. Se o esquema muda, a tabela atualiza sozinha e evitamos discrepâncias...",
+   "m": "2026-09-24",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/automatizar-tabelas-e-listas-de-pinos-no-simulador-caseiro.html",
+   "pilar": "bastidores"
+  },
   {
    "t": "Renderizar diagramas localmente sem depender de CDNs",
    "d": "Versiona mermaid.js@10 no teu dashboard para converter imagens em SVG vetorial. Mantém o pipeline de estudo offline e sem dependências externas na recuperação...",

@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Automatizar tabelas e listas de pinos no simulador caseiro</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/automatizar-tabelas-e-listas-de-pinos-no-simulador-caseiro.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/automatizar-tabelas-e-listas-de-pinos-no-simulador-caseiro.html</guid>
+    <pubDate>Thu, 24 Sep 2026 11:38:12 +0100</pubDate>
+    <description>Geramos tabelas de verdade e listas de fios diretamente do modelo de simulação digital. Se o esquema muda, a tabela atualiza sozinha e evitamos discrepâncias...</description>
+  </item>
+  <item>
     <title>Renderizar diagramas localmente sem depender de CDNs</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html</guid>
@@ -135,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-bot-que-faz-dinheiro-a-laboratorio-quant-o-reframe-do-for.html</guid>
     <pubDate>Tue, 14 Jul 2026 04:18:29 +0100</pubDate>
     <description>Como mudámos o foco de “quanto rende?” para “isto sobrevive a custos e a um teste honesto?”, num template para validar hipóteses com agentes.</description>
-  </item>
-  <item>
-    <title>De scripts soltos a sistema: a convenção MODULE + handle()</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-scripts-soltos-a-sistema-a-convencao-module-handle.html</guid>
-    <pubDate>Tue, 14 Jul 2026 04:18:29 +0100</pubDate>
-    <description>Como padronizar metadados e um handle() unificado transformou scripts dispersos num OS coerente, onde cada novo módulo cabe numa tarde.</description>
   </item>
 </channel></rss>
