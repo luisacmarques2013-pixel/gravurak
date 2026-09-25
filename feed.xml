@@ -4,6 +4,20 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Simular em duas ordens para apanhar corridas em circuitos locais</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/simular-em-duas-ordens-para-apanhar-corridas-em-circuitos.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/simular-em-duas-ordens-para-apanhar-corridas-em-circuitos.html</guid>
+    <pubDate>Fri, 25 Sep 2026 10:32:57 +0100</pubDate>
+    <description>Um simulador de portas lógicas que propaga sinais em duas ordens diferentes. Apanha fios trocados e corridas antes de ligar hardware. Tabelas de verdade nascem...</description>
+  </item>
+  <item>
+    <title>A doutrina “não é não”: limites duros em frotas de agentes locais</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html</guid>
+    <pubDate>Fri, 25 Sep 2026 10:32:56 +0100</pubDate>
+    <description>Como um bug num guarda de GPU nos ensinou a impor limites duros a agentes locais que insistem em tarefas recusadas.</description>
+  </item>
+  <item>
     <title>Automatizar tabelas e listas de pinos no simulador caseiro</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/automatizar-tabelas-e-listas-de-pinos-no-simulador-caseiro.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/automatizar-tabelas-e-listas-de-pinos-no-simulador-caseiro.html</guid>
@@ -128,19 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-campo-oraculo-calibrar-agentes-locais-com-validacao-extern.html</guid>
     <pubDate>Tue, 14 Jul 2026 15:25:46 +0100</pubDate>
     <description>A ideia de um campo ORÁCULO no devlog do KrakenAI: vereditos externos e deterministas para calibrar agentes locais — e a lição do cansaço que a pariu.</description>
-  </item>
-  <item>
-    <title>Um servidor, mil módulos: a arquitetura que sustenta o KrakenOS</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/um-servidor-mil-modulos-a-arquitetura-que-sustenta-o-krakeno.html</guid>
-    <pubDate>Tue, 14 Jul 2026 04:21:04 +0100</pubDate>
-    <description>Trocar um processo por porta por um único servidor modular (porta 8755) reduziu a complexidade e tornou viável rodar agentes locais numa RTX doméstica.</description>
-  </item>
-  <item>
-    <title>De bot que faz dinheiro a laboratório quant: o reframe do Forex v0</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-bot-que-faz-dinheiro-a-laboratorio-quant-o-reframe-do-for.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/de-bot-que-faz-dinheiro-a-laboratorio-quant-o-reframe-do-for.html</guid>
-    <pubDate>Tue, 14 Jul 2026 04:18:29 +0100</pubDate>
-    <description>Como mudámos o foco de “quanto rende?” para “isto sobrevive a custos e a um teste honesto?”, num template para validar hipóteses com agentes.</description>
   </item>
 </channel></rss>

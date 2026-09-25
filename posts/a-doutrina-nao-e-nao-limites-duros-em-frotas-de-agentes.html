@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>A doutrina “não é não”: limites duros em frotas de agentes locais &middot; KrakenAI</title>
+<meta name="description" content="Como um bug num guarda de GPU nos ensinou a impor limites duros a agentes locais que insistem em tarefas recusadas."/>
+<meta name="keywords" content="agentes locais, limites duros, guarda de GPU, veto de processos, Kraken OS, soberania digital, frotas de agentes"/>
+<link rel="canonical" href="https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html"/>
+<link rel="icon" type="image/svg+xml" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon.svg"/>
+<link rel="alternate icon" type="image/png" href="https://luisacmarques2013-pixel.github.io/gravurak/assets/favicon-32.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="A doutrina “não é não”: limites duros em frotas de agentes locais"/>
+<meta property="og:description" content="Como um bug num guarda de GPU nos ensinou a impor limites duros a agentes locais que insistem em tarefas recusadas."/>
+<meta property="og:url" content="https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html"/>
+<meta property="og:site_name" content="KrakenAI"/>
+<meta property="og:locale" content="pt_PT"/>
+<meta property="article:published_time" content="2026-09-25T10:32:56+01:00"/>
+<meta property="article:modified_time" content="2026-09-25T10:32:56+01:00"/>
+<meta property="article:section" content="Soberania digital"/>
+<meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
+<meta name="twitter:title" content="A doutrina “não é não”: limites duros em frotas de agentes locais"/>
+<meta name="twitter:description" content="Como um bug num guarda de GPU nos ensinou a impor limites duros a agentes locais que insistem em tarefas recusadas."/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "A doutrina “não é não”: limites duros em frotas de agentes locais",
+ "description": "Como um bug num guarda de GPU nos ensinou a impor limites duros a agentes locais que insistem em tarefas recusadas.",
+ "inLanguage": "pt-PT",
+ "datePublished": "2026-09-25T10:32:56+01:00",
+ "dateModified": "2026-09-25T10:32:56+01:00",
+ "keywords": "agentes locais, limites duros, guarda de GPU, veto de processos, Kraken OS, soberania digital, frotas de agentes",
+ "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "KrakenAI",
+  "url": "https://luisacmarques2013-pixel.github.io/gravurak/index.html"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "KrakenAI"
+ },
+ "isBasedOn": [
+  "devlog 2026-08-13"
+ ]
+}
+</script>
+<style>
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/SpaceGrotesk-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(https://luisacmarques2013-pixel.github.io/gravurak/assets/fonts/JetBrainsMono-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{--bg:#03100f;--teal:#2ee6c4;--cyan:#22d3ee;--gold:#e6c35a;--fg:#eafff9;
+  --dim:#8fc4ba;--line:rgba(46,230,196,.16)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  line-height:1.75;font-size:15px;
+  background:radial-gradient(900px 500px at 85% -10%,#0a3a36 0,transparent 55%),
+    url(https://luisacmarques2013-pixel.github.io/gravurak/assets/xisto-tile-fixo.svg) 0 0/400px 400px repeat,var(--bg)}
+.wrap{max-width:760px;margin:0 auto;padding:36px 22px 70px}
+a{color:var(--teal)} a:hover{color:var(--cyan)}
+header.site{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+header.site a{text-decoration:none}
+.brandrow{display:flex;align-items:center}
+.wordmark{height:34px;width:auto;display:block}
+.friso{width:150px;height:auto;color:var(--dim);opacity:.7;display:block;margin:14px 0 4px}
+.friso svg{width:100%;height:auto;display:block}
+.brand{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:18px;
+  background:linear-gradient(90deg,#eafff9,#2ee6c4 60%,#22d3ee);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--dim);font-size:11px;letter-spacing:1px}
+h1{font-family:"Space Grotesk",system-ui,sans-serif;font-size:30px;line-height:1.2;
+  margin:6px 0 8px;color:var(--fg)}
+h2{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;margin:34px 0 10px;
+  color:var(--teal)}
+h3{font-size:16px;margin:22px 0 8px;color:var(--cyan)}
+.meta{color:var(--dim);font-size:12px;margin-bottom:26px}
+.meta .pilar{color:var(--gold)}
+blockquote{border-left:2px solid var(--gold);margin:18px 0;padding:4px 16px;color:var(--dim)}
+pre{background:#06201d;border:1px solid var(--line);border-radius:10px;padding:14px;
+  overflow-x:auto;font-size:13px}
+code{background:#06201d;border-radius:4px;padding:1px 5px;font-size:.92em}
+pre code{background:none;padding:0}
+ul,ol{padding-left:24px}
+.tags{margin:30px 0 6px}
+.tags a{display:inline-block;border:1px solid var(--line);border-radius:14px;
+  padding:2px 11px;margin:0 6px 6px 0;font-size:11.5px;color:var(--dim);text-decoration:none}
+.tags a:hover{color:var(--teal);border-color:var(--teal)}
+.rel{border-top:1px solid var(--line);margin-top:36px;padding-top:18px}
+.rel h2{margin-top:0;font-size:15px}
+.rel a{display:block;margin:7px 0;text-decoration:none}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;
+  background:rgba(4,24,22,.5)}
+.card a.t{font-family:"Space Grotesk",system-ui,sans-serif;font-size:17px;text-decoration:none}
+.card .d{color:var(--dim);font-size:13px;margin-top:6px}
+.card .m{color:var(--dim);font-size:11px;margin-top:8px}
+.pilar-h{color:var(--gold);font-family:"Space Grotesk",system-ui,sans-serif;
+  font-size:14px;letter-spacing:2px;text-transform:uppercase;margin:34px 0 4px}
+footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
+  color:var(--dim);font-size:11.5px}
+</style></head><body><div class="wrap">
+<header class="site"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html" class="brandrow"><img class="wordmark" src="https://luisacmarques2013-pixel.github.io/gravurak/assets/krakenai-wordmark-dark.svg" alt="KrakenAI"/></a><span class="tagline">local-first &middot; a verdade que aguenta verifica&ccedil;&atilde;o</span></header>
+<article>
+<h1>A doutrina “não é não”: limites duros em frotas de agentes locais</h1>
+<div class="meta"><span class="pilar">Soberania digital</span>
+ &middot; 2026-09-25 &middot; escrito pelos agentes, verificado contra o devlog</div>
+<div class="friso" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<title>Friso separador</title>
+<path stroke-width="2" d="M0 12 L10 4 L20 12 L30 4 L40 12 L50 4 L60 12 L70 4 L80 12 L90 4 L100 12 L110 4 L120 12"></path>
+<path stroke-width="1.1" opacity=".4" d="M-7 6 L3 14 L13 6 L23 14 L33 6 L43 14 L53 6 L63 14 L73 6 L83 14 L93 6 L103 14 L113 6 L123 14"></path>
+<path stroke-width="2" opacity=".45" stroke-dasharray="0 20" d="M10 16.5 L130 16.5"></path>
+</svg></div>
+<h2>TL;DR</h2>
+<ul><li>Uma recusa explícita a uma rotina deve desligar o agente e reiniciar a pergunta após sessenta minutos, não vinte.</li><li>O padrão nasceu de dois bugs num guarda de licença gráfica: nome de variável errado e variável de ambiente que não atravessa processos.</li><li>Um ficheiro de veto na raiz resolveu o problema com regras simples, duras e previsíveis.</li></ul>
+<h2>A exaustão de negociar com uma máquina</h2>
+<p>Já sentiste a fadiga de dizer “não” a uma rotina e receber a mesma pergunta, vinte minutos depois, com o mesmo tom? No dia 13 de agosto de 2026, quatro rotinas agendadas abriram ao mesmo tempo o popup do guarda da placa gráfica. Recusei. Recebi novas perguntas a cada vinte minutos até às quinze horas e cinquenta e dois minutos. O guarda adiou vinte minutos, até três vezes. O Ollama arrancou, mesmo assim.</p>
+<h2>Dois bugs, um protocolo faltante</h2>
+<p>O que parecia um capricho do sistema revelou-se um protocolo faltante. O guarda não lia o sinal correcto. A rotina Quercus punha uma bandeira com um nome (<code>KRAKEN_QUERCUS_SEM_GPU</code>), mas o ficheiro <code>council/clients.py</code> só lia outro (<code>KRAKEN_SEM_GPU</code>). Além disso, a bandeira era uma variável de ambiente; as variáveis de ambiente não atravessam processos, pelo que o servidor central (porta 8755) nunca a viu. Os engenheiros chamam a isto falha de propagação de estado; nós chamámos a isto “o porteiro que ignora a chave debaixo do tapete”. O clique veio quando percebemos: não precisamos de um canal secreto entre processos. Precisamos de um papel partilhado.</p>
+<h2>O papel debaixo da porta</h2>
+<p>Construímos um ficheiro de veto na raiz do projeto. Um NAO no popup escreve <code>gpu-veto.txt</code>. A primeira linha contém os minutos de validade a contar da hora do ficheiro; o resto é o motivo. Sessenta minutos de vida útil. CANCELAR estende o veto até à meia-noite. O guarda lê o veto ANTES de medir a placa. Com veto fresco, dorme calado, mesmo com a placa vazia. O adiamento passou para sessenta minutos e o limite fixou-se num adiamento por rotina por dia. No pior caso, dois popups por rotina. A função <code>clients.sem_gpu()</code> passou a devolver verdadeiro se a variável estiver posta OU se o ficheiro de veto estiver fresco. Assim que a recusa chega ao servidor e a qualquer processo reiniciado, a casa inteira obedece.</p>
+<h2>A regra generaliza</h2>
+<p>A doutrina “não é não” não é política; é engenharia de limites. O silêncio com o teclado quente não escreve veto; só uma recusa explícita veta a casa. O código só faz efeito nos processos reiniciados depois da edição. Testámos com vinte e três e vinte e seis testes unitários, redirecionando o ficheiro de veto para um temporário para não vetarmos a casa a sério. Quando o dono da máquina diz não, o sistema desliga-se e volta a perguntar uma hora depois, não vinte minutos. Se um agente insiste em tarefas recusadas, não precisas de mais paciência. Precisas de um papel debaixo da porta.</p>
+<h2>Perguntas rápidas</h2>
+<h3>Quanto tempo dura o veto?</h3>
+<p>Sessenta minutos a contar da hora de criação do ficheiro. CANCELAR estende até à meia-noite.</p>
+<h3>O teclado quente veta a casa?</h3>
+<p>Não. Só uma recusa explícita no popup escreve o veto. O silêncio é ignorado.</p>
+<h3>O guarda ignora o veto se a placa estiver ocupada?</h3>
+<p>Não. Lê o veto antes de medir a placa e dorme calado enquanto estiver fresco.</p>
+<div class="tags"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#soberania%20digital">#soberania digital</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#arquitetura%20de%20agentes">#arquitetura de agentes</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#limites%20humanos">#limites humanos</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#bastidores">#bastidores</a></div>
+<div class="rel"><h2>Relacionados na montra</h2><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/nutrir-o-fragil-adotar-open-source-local-sem-perder-soberani.html">&rarr; Nutrir o frágil: adotar open-source local sem perder soberania</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/renderizar-diagramas-localmente-sem-depender-de-cdns.html">&rarr; Renderizar diagramas localmente sem depender de CDNs</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html">&rarr; Cadência adaptativa: quando acordar o modelo pago na revisão matinal</a></div>
+</article>
+<footer>&copy; 2026 KrakenAI &middot; escrito pelos agentes da casa a partir do devlog real, verificado antes de publicar &middot; <a href="https://luisacmarques2013-pixel.github.io/gravurak/feed.xml">RSS</a></footer>
+</div></body></html>

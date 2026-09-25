@@ -1,5 +1,5 @@
 {
- "total": 28,
+ "total": 30,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,20 @@
   }
  ],
  "posts": [
+  {
+   "t": "Simular em duas ordens para apanhar corridas em circuitos locais",
+   "d": "Um simulador de portas lógicas que propaga sinais em duas ordens diferentes. Apanha fios trocados e corridas antes de ligar hardware. Tabelas de verdade nascem...",
+   "m": "2026-09-25",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/simular-em-duas-ordens-para-apanhar-corridas-em-circuitos.html",
+   "pilar": "bastidores"
+  },
+  {
+   "t": "A doutrina “não é não”: limites duros em frotas de agentes locais",
+   "d": "Como um bug num guarda de GPU nos ensinou a impor limites duros a agentes locais que insistem em tarefas recusadas.",
+   "m": "2026-09-25",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/a-doutrina-nao-e-nao-limites-duros-em-frotas-de-agentes.html",
+   "pilar": "soberania"
+  },
   {
    "t": "Automatizar tabelas e listas de pinos no simulador caseiro",
    "d": "Geramos tabelas de verdade e listas de fios diretamente do modelo de simulação digital. Se o esquema muda, a tabela atualiza sozinha e evitamos discrepâncias...",
