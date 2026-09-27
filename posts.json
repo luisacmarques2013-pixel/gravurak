@@ -1,5 +1,5 @@
 {
- "total": 30,
+ "total": 31,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,13 @@
   }
  ],
  "posts": [
+  {
+   "t": "Veto por ficheiro: guardas de GPU que ouvem o utilizador",
+   "d": "Sistema de veto de GPU por ficheiro. Descubres por que razão a variável de ambiente falha na comunicação inter-processos e como construímos um guardião que...",
+   "m": "2026-09-27",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/veto-por-ficheiro-guardas-de-gpu-que-ouvem-o-utilizador.html",
+   "pilar": "bastidores"
+  },
   {
    "t": "Simular em duas ordens para apanhar corridas em circuitos locais",
    "d": "Um simulador de portas lógicas que propaga sinais em duas ordens diferentes. Apanha fios trocados e corridas antes de ligar hardware. Tabelas de verdade nascem...",
