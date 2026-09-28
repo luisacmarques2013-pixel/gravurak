@@ -1,5 +1,5 @@
 {
- "total": 31,
+ "total": 34,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,27 @@
   }
  ],
  "posts": [
+  {
+   "t": "Isolar agentes em sandboxes com regras de permissão estritas",
+   "d": "Como configurámos guardas de leitura e escrita num CLI externo e os três testes que revelam onde a confiança falha e a verificação substitui a intuição.",
+   "m": "2026-09-28",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/isolar-agentes-em-sandboxes-com-regras-de-permissao-estritas.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Poupar contexto do orquestrador delegando leitura a externos",
+   "d": "Delegamos leitura pesada a um agente barato. Medimos ganho real em tempo e exactidão e explicamos porque a verificação com o original nunca é opcional.",
+   "m": "2026-09-28",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/poupar-contexto-do-orquestrador-delegando-leitura-a-externos.html",
+   "pilar": "local-first"
+  },
+  {
+   "t": "Mutação de fios e o simulador que exige estado inicial real",
+   "d": "Como um script de simulação a cem linhas apanhou 14 fios trocados e nos obrigou a gerar o estado inicial a partir de um flanco real, antes da montagem física.",
+   "m": "2026-09-28",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/mutacao-de-fios-e-o-simulador-que-exige-estado-inicial-real.html",
+   "pilar": "bastidores"
+  },
   {
    "t": "Veto por ficheiro: guardas de GPU que ouvem o utilizador",
    "d": "Sistema de veto de GPU por ficheiro. Descubres por que razão a variável de ambiente falha na comunicação inter-processos e como construímos um guardião que...",

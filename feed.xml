@@ -4,6 +4,27 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Isolar agentes em sandboxes com regras de permissão estritas</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/isolar-agentes-em-sandboxes-com-regras-de-permissao-estritas.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/isolar-agentes-em-sandboxes-com-regras-de-permissao-estritas.html</guid>
+    <pubDate>Mon, 28 Sep 2026 10:32:41 +0100</pubDate>
+    <description>Como configurámos guardas de leitura e escrita num CLI externo e os três testes que revelam onde a confiança falha e a verificação substitui a intuição.</description>
+  </item>
+  <item>
+    <title>Poupar contexto do orquestrador delegando leitura a externos</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/poupar-contexto-do-orquestrador-delegando-leitura-a-externos.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/poupar-contexto-do-orquestrador-delegando-leitura-a-externos.html</guid>
+    <pubDate>Mon, 28 Sep 2026 10:32:41 +0100</pubDate>
+    <description>Delegamos leitura pesada a um agente barato. Medimos ganho real em tempo e exactidão e explicamos porque a verificação com o original nunca é opcional.</description>
+  </item>
+  <item>
+    <title>Mutação de fios e o simulador que exige estado inicial real</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/mutacao-de-fios-e-o-simulador-que-exige-estado-inicial-real.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/mutacao-de-fios-e-o-simulador-que-exige-estado-inicial-real.html</guid>
+    <pubDate>Mon, 28 Sep 2026 10:32:41 +0100</pubDate>
+    <description>Como um script de simulação a cem linhas apanhou 14 fios trocados e nos obrigou a gerar o estado inicial a partir de um flanco real, antes da montagem física.</description>
+  </item>
+  <item>
     <title>Veto por ficheiro: guardas de GPU que ouvem o utilizador</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/veto-por-ficheiro-guardas-de-gpu-que-ouvem-o-utilizador.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/veto-por-ficheiro-guardas-de-gpu-que-ouvem-o-utilizador.html</guid>
@@ -121,26 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/cadencia-adaptativa-quando-acordar-o-modelo-pago-na-revisao.html</guid>
     <pubDate>Fri, 17 Jul 2026 10:32:52 +0100</pubDate>
     <description>Como cortámos custos de IA ao condicionar a execução do Opus à presença de obra nova ou deriva detetada, sem perder rigor na revisão diária.</description>
-  </item>
-  <item>
-    <title>Como tornámos o ensemble de consultores num motor selecionável</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-tornamos-o-ensemble-de-consultores-num-motor.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-tornamos-o-ensemble-de-consultores-num-motor.html</guid>
-    <pubDate>Fri, 17 Jul 2026 10:32:52 +0100</pubDate>
-    <description>Registoumos o MoA no `_FNS` para fan-out paralelo via `clients.ask(&#x27;conselho&#x27;, ...)`. O funil, rag e estafeta ligam-se ao ensemble local sem custos cloud.</description>
-  </item>
-  <item>
-    <title>Estafeta em leque: fan-out com consolidação num turno único</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/estafeta-em-leque-fan-out-com-consolidacao-num-turno-unico.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/estafeta-em-leque-fan-out-com-consolidacao-num-turno-unico.html</guid>
-    <pubDate>Fri, 17 Jul 2026 10:32:52 +0100</pubDate>
-    <description>Arquitetura do /estafeta no Kraken OS: fan-out paralelo de agentes e relatório consolidado num único turno, com rastreabilidade intacta e rodapé honesto para...</description>
-  </item>
-  <item>
-    <title>ponte_stream: corrida latente exposta por spawn lento</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/ponte-stream-corrida-latente-exposta-por-spawn-lento-sob.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/ponte-stream-corrida-latente-exposta-por-spawn-lento-sob.html</guid>
-    <pubDate>Thu, 16 Jul 2026 10:33:24 +0100</pubDate>
-    <description>Narrámos como um teste que falhou na v0.18 revelou uma corrida no helper de streaming e o que isso ensina sobre testes verdes em agentes paralelos.</description>
   </item>
 </channel></rss>
