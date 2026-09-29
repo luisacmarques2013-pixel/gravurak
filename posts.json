@@ -1,5 +1,5 @@
 {
- "total": 34,
+ "total": 36,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,20 @@
   }
  ],
  "posts": [
+  {
+   "t": "Trancar a análise antes do resultado: matar um fator barato",
+   "d": "Como o pré-registo travado e a medição de latência realista nos levaram a aceitar um NO-GO rápido num fator de insider buys.",
+   "m": "2026-09-29",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/trancar-a-analise-antes-do-resultado-matar-um-fator-barato.html",
+   "pilar": "agentes"
+  },
+  {
+   "t": "Cache vazia e relógio da SEC: latência real em pipelines locais",
+   "d": "Descubres porque é que um retorno anormal de +1,20% vira Sharpe negativo a 126 dias quando a SEC arquivava documentos depois do fecho da bolsa.",
+   "m": "2026-09-29",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/cache-vazia-e-relogio-da-sec-latencia-real-em-pipelines.html",
+   "pilar": "local-first"
+  },
   {
    "t": "Isolar agentes em sandboxes com regras de permissão estritas",
    "d": "Como configurámos guardas de leitura e escrita num CLI externo e os três testes que revelam onde a confiança falha e a verificação substitui a intuição.",
