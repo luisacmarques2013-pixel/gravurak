@@ -1,5 +1,5 @@
 {
- "total": 36,
+ "total": 37,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,13 @@
   }
  ],
  "posts": [
+  {
+   "t": "O viés de look-ahead que comeu o nosso sinal alpha",
+   "d": "Como um desfasamento horário entre a SEC e a bolsa transformou +1,20% em zero. Documentamos o método de verificação adversária que matou o sinal hoje.",
+   "m": "2026-09-30",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/o-vies-de-look-ahead-que-comeu-o-nosso-sinal-alpha.html",
+   "pilar": "bastidores"
+  },
   {
    "t": "Trancar a análise antes do resultado: matar um fator barato",
    "d": "Como o pré-registo travado e a medição de latência realista nos levaram a aceitar um NO-GO rápido num fator de insider buys.",

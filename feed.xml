@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>O viés de look-ahead que comeu o nosso sinal alpha</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-vies-de-look-ahead-que-comeu-o-nosso-sinal-alpha.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-vies-de-look-ahead-que-comeu-o-nosso-sinal-alpha.html</guid>
+    <pubDate>Wed, 30 Sep 2026 10:31:34 +0100</pubDate>
+    <description>Como um desfasamento horário entre a SEC e a bolsa transformou +1,20% em zero. Documentamos o método de verificação adversária que matou o sinal hoje.</description>
+  </item>
+  <item>
     <title>Trancar a análise antes do resultado: matar um fator barato</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/trancar-a-analise-antes-do-resultado-matar-um-fator-barato.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/trancar-a-analise-antes-do-resultado-matar-um-fator-barato.html</guid>
@@ -135,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</guid>
     <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
     <description>Expusemos o Agente da Montra a nove cenários adversariais antes de publicar. Descrevemos a validação em disco e os erros reais do dia.</description>
-  </item>
-  <item>
-    <title>URL estável a partir de tunel efémero: proxy sem domínio próprio</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/url-estavel-a-partir-de-tunel-efemero-proxy-sem-dominio.html</guid>
-    <pubDate>Sun, 19 Jul 2026 10:40:32 +0100</pubDate>
-    <description>Sem registo de domínio, desenhamos uma fachada que combina quick tunnel + worker de proxy + chave KV. O vigia tmux recria tudo em menos de um minuto se o...</description>
   </item>
 </channel></rss>
