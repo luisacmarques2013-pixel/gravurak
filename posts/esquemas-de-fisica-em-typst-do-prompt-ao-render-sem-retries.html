@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
 <meta property="article:published_time" content="2026-07-14T03:28:42+01:00"/>
-<meta property="article:modified_time" content="2026-07-14T03:28:42+01:00"/>
+<meta property="article:modified_time" content="2026-11-09T14:06:03+00:00"/>
 <meta property="article:section" content="IA local-first"/>
 <meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -30,7 +30,7 @@
  "description": "Helpers locais em Typst para diagramas de corpo-livre e plano inclinado. Testados num problema real com zero retries. Asset aberto no GitHub.",
  "inLanguage": "pt-PT",
  "datePublished": "2026-07-14T03:28:42+01:00",
- "dateModified": "2026-07-14T03:28:42+01:00",
+ "dateModified": "2026-11-09T14:06:03+00:00",
  "keywords": "Typst, física, diagramas, corpo-livre, plano inclinado, agentes STEM, determinístico",
  "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/esquemas-de-fisica-em-typst-do-prompt-ao-render-sem-retries.html",
  "mainEntityOfPage": {
@@ -121,9 +121,9 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <h2>TL;DR</h2>
 <ul><li>Construímos helpers locais em Typst para gerar esquemas de corpo-livre e plano inclinado com saída determinística.</li><li>O teste real (robo de 12 kg, rampa a 25°, μ=0,30) renderizou sem retries: N=106,6 N, a=1,48 m/s².</li><li>O asset <code>typst-esquemas-fisica.typ</code> foi portado para skill local e para o repo Cadeiras no GitHub.</li></ul>
 <h2>O problema: diagramas que pedem retries</h2>
-<p>Quando se treina um agente para resolver problemas de mecânica, a saída visual é tão importante quanto o número. Um esquema desenhado à mão ou gerado por imagem falha em três pontos: não é editável, não escala e introduz variabilidade no pipeline. Para as Cadeiras do IPG, precisávamos de diagramas que o motor pudesse ler, validar e devolver sem pedir correções ao LLM. A solução passava por um formato vetorial leve, versionável e determinístico: Typst.</p>
+<p>Quando se treina um agente para resolver problemas de mecânica, a saída visual é tão importante quanto o número. Um esquema desenhado à mão ou gerado por imagem falha em três pontos: não é editável, não escala e introduz variabilidade no pipeline. Para as cadeiras do curso, precisávamos de diagramas que o motor pudesse ler, validar e devolver sem pedir correções ao LLM. A solução passava por um formato vetorial leve, versionável e determinístico: Typst.</p>
 <h2>O que construímos</h2>
-<p>Criámos um conjunto de macros em Typst focadas nos diagramas que mais aparecem nas provas de física das cadeiras de Engenharia Informática (IPG): seta vetorial, referencial cartesiano, corpo-livre e plano inclinado. Cada macro aceita parâmetros explícitos (massa, ângulo, coeficiente de atrito) e desenha o esquema com notação matemática alinhada. Não há geração por imagem nem chamadas a modelos externos para o render — é texto que compila em PDF. O resultado foi empacotado como asset local (<code>typst-esquemas-fisica.typ</code>) e sincronizado com o repo Cadeiras no GitHub, pronto a ser chamado pelos agentes da casa.</p>
+<p>Criámos um conjunto de macros em Typst focadas nos diagramas que mais aparecem nas provas de física das cadeiras de Engenharia Informática: seta vetorial, referencial cartesiano, corpo-livre e plano inclinado. Cada macro aceita parâmetros explícitos (massa, ângulo, coeficiente de atrito) e desenha o esquema com notação matemática alinhada. Não há geração por imagem nem chamadas a modelos externos para o render — é texto que compila em PDF. O resultado foi empacotado como asset local (<code>typst-esquemas-fisica.typ</code>) e sincronizado com o repo Cadeiras no GitHub, pronto a ser chamado pelos agentes da casa.</p>
 <h2>O teste real</h2>
 <p>Em vez de confiar em “acho que está certo”, fomos VER o PDF. Problema escolhido: um robô de 12 kg numa rampa a 25°, com μ=0,30. O motor gerou o esquema, calculou as componentes e devolveu N=106,6 N e a=1,48 m/s². Zero retries. A consistência entre o desenho e os valores foi verificada manualmente — a olhar para o PDF renderizado, não para o log verde. Quando um agente STEM não pede correções ao render, ganha-se tempo de inferência e elimina-se uma fonte comum de alucinação visual.</p>
 <h2>O que correu mal (e o que ensinou)</h2>

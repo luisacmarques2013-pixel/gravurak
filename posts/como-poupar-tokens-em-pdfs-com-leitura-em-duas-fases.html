@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
 <meta property="article:published_time" content="2026-07-31T09:12:44+01:00"/>
-<meta property="article:modified_time" content="2026-07-31T09:12:44+01:00"/>
+<meta property="article:modified_time" content="2026-11-09T14:06:03+00:00"/>
 <meta property="article:section" content="IA local-first"/>
 <meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -30,7 +30,7 @@
  "description": "Decodificar material académico sem queimar API: o padrão de leitura híbrida que separa texto extraível de diagramas antes de chamar a visão artificial.",
  "inLanguage": "pt-PT",
  "datePublished": "2026-07-31T09:12:44+01:00",
- "dateModified": "2026-07-31T09:12:44+01:00",
+ "dateModified": "2026-11-09T14:06:03+00:00",
  "keywords": "decodificação PDF, poupança de tokens, pypdfium2, Gemini vision, material académico, Kraken OS, leitura em duas fases",
  "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/como-poupar-tokens-em-pdfs-com-leitura-em-duas-fases.html",
  "mainEntityOfPage": {
@@ -129,7 +129,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <h2>O click</h2>
 <p>O que parecia ser um problema de capacidade do modelo acabou por ser um problema de entrega. Os PDFs académicos não são ilegíveis; estão apenas a falar a língua errada para uma LLM quando os servimos crus. Ao separar o texto plano da informação visual, paramos de confundir o agente com ruído estrutural. A poupança de tokens vem naturalmente: o contexto encolhe onde era suposto encolher, e o modelo gasta apenas a sua capacidade de raciocínio onde realmente há algo para ver.</p>
 <h2>O que ficou provado</h2>
-<p>O filtro entrou no módulo /faculdade/ do Kraken OS (porta 8755). O botão MD e a rota /markdown convertem os ficheiros para markdown lean antes de entrarem no contexto da sessão. Para as cadeiras do IPG, o decodificador produz _estudo.md: matéria-prima limpa para a skill /frequencia. A renderização de Mermaid está vendorizada localmente (mermaid.js@10 no dashboard), sem depender de CDN externo. O documento sai pronto para estudo e para revisão em casa.</p>
+<p>O filtro entrou no módulo /faculdade/ do Kraken OS (porta 8755). O botão MD e a rota /markdown convertem os ficheiros para markdown lean antes de entrarem no contexto da sessão. Para as cadeiras do curso, o decodificador produz _estudo.md: matéria-prima limpa para a skill /frequencia. A renderização de Mermaid está vendorizada localmente (mermaid.js@10 no dashboard), sem depender de CDN externo. O documento sai pronto para estudo e para revisão em casa.</p>
 <p>Não é perfeito. Páginas com anotações sobrepostas ao texto digital ainda exigem o passo de visão, e diagramos muito densos podem gerar descrições longas. Mas a conta mensal mantém-se sob controlo porque só pagamos pelo que realmente precisa de olhos artificiais. O workspace enche-se de artefactos reais sem inflacionar o contexto.</p>
 <h2>Perguntas rápidas</h2>
 <h3>Posso aplicar isto a PDFs que não sejam académicos?</h3>
