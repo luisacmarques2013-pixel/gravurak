@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="KrakenAI"/>
 <meta property="og:locale" content="pt_PT"/>
 <meta property="article:published_time" content="2026-09-27T20:15:48+01:00"/>
-<meta property="article:modified_time" content="2026-09-27T20:15:48+01:00"/>
+<meta property="article:modified_time" content="2026-11-09T22:25:45+00:00"/>
 <meta property="article:section" content="Bastidores da obra"/>
 <meta property="og:image" content="https://luisacmarques2013-pixel.github.io/gravurak/assets/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -30,7 +30,7 @@
  "description": "Sistema de veto de GPU por ficheiro. Descubres por que razão a variável de ambiente falha na comunicação inter-processos e como construímos um guardião que...",
  "inLanguage": "pt-PT",
  "datePublished": "2026-09-27T20:15:48+01:00",
- "dateModified": "2026-09-27T20:15:48+01:00",
+ "dateModified": "2026-11-09T22:25:45+00:00",
  "keywords": "veto GPU, comunicação inter-processos, variável de ambiente, guardião de recursos, agentes locais, Kraken OS, ficheiro de veto",
  "url": "https://luisacmarques2013-pixel.github.io/gravurak/posts/veto-por-ficheiro-guardas-de-gpu-que-ouvem-o-utilizador.html",
  "mainEntityOfPage": {
@@ -133,7 +133,7 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding-top:16px;
 <h3>Por que razão a variável de ambiente não funcionou?</h3>
 <p>Variáveis de ambiente não atravessam processos. Cada processo arranca com o seu próprio conjunto de variáveis. O servidor central e a rotina Quercus nunca partilharam o mesmo contexto.</p>
 <h3>O que acontece se eu fechar o popup sem responder?</h3>
-<p>O silêncio não escreve veto. O guarda continua a pedir a GPU de vinte em vinte minutos até à expiração ou até receberes uma recusa explícita.</p>
+<p>O silêncio não escreve veto, mas também não é um sim. Passados dois minutos sem resposta, o guarda olha para o teclado. Se lhe tocaste há pouco, conta como «agora não»: adia sessenta minutos e pergunta mais uma vez. Se voltar a ficar sem resposta contigo ao teclado, desiste por hoje. Se a máquina estiver parada, a rotina corre, porque não há ninguém a quem atrapalhar.</p>
 <h3>O veto aplica-se a todos os processos?</h3>
 <p>Sim. <code>clients.sem_gpu()</code> verifica o ficheiro e a variável. Processos reiniciados após a criação do ficheiro leem o veto imediatamente.</p>
 <div class="tags"><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#bastidores">#bastidores</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#gpu%20local">#gpu local</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#comunica%C3%A7%C3%A3o%20inter%20processos">#comunicação inter processos</a><a href="https://luisacmarques2013-pixel.github.io/gravurak/index.html#devlog">#devlog</a></div>
