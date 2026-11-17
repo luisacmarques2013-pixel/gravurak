@@ -4,6 +4,13 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Compilar não é prova: 4 regras de pipeline que mudaram o dev</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/compilar-nao-e-prova-4-regras-de-pipeline-que-mudaram-o-dev.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/compilar-nao-e-prova-4-regras-de-pipeline-que-mudaram-o-dev.html</guid>
+    <pubDate>Tue, 17 Nov 2026 10:31:50 +0000</pubDate>
+    <description>Descubra como quatro regras de pipeline e um agente de revisão eliminaram bugs de fecho. Aprenda a provar que o código funciona antes de o fechar.</description>
+  </item>
+  <item>
     <title>O viés de look-ahead que comeu o nosso sinal alpha</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-vies-de-look-ahead-que-comeu-o-nosso-sinal-alpha.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/o-vies-de-look-ahead-que-comeu-o-nosso-sinal-alpha.html</guid>
@@ -135,12 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html</guid>
     <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
     <description>O Agente da Montra ignora a pergunta se já foi respondida ou se excedeu os baldes de 15/h e 30/d. Assim evitamos faturas surpresa sem perder funcionalidade.</description>
-  </item>
-  <item>
-    <title>Os caretos do vendedor: quando treinamos o agente para mentir</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/os-caretos-do-vendedor-quando-treinamos-o-agente-para-mentir.html</guid>
-    <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
-    <description>Expusemos o Agente da Montra a nove cenários adversariais antes de publicar. Descrevemos a validação em disco e os erros reais do dia.</description>
   </item>
 </channel></rss>
