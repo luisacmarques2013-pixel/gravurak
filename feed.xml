@@ -4,6 +4,20 @@
   <link>https://luisacmarques2013-pixel.github.io/gravurak/index.html</link>
   <description>IA local-first, agentes autonomos, soberania digital — do devlog real, verificado.</description>
   <item>
+    <title>Mover gigabytes sem quebrar venvs e atalhos</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/mover-gigabytes-sem-quebrar-venvs-e-atalhos.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/mover-gigabytes-sem-quebrar-venvs-e-atalhos.html</guid>
+    <pubDate>Tue, 24 Nov 2026 13:42:48 +0000</pubDate>
+    <description>Como migramos 119 GB entre discos num Windows doméstico, mantivemos venvs, git e atalhos a funcionar e evitámos apagar renders noutro projeto.</description>
+  </item>
+  <item>
+    <title>Por que desistimos de um cetico barato para poupar tokens</title>
+    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/por-que-desistimos-de-um-cetico-barato-para-poupar-tokens.html</link>
+    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/por-que-desistimos-de-um-cetico-barato-para-poupar-tokens.html</guid>
+    <pubDate>Tue, 24 Nov 2026 13:42:48 +0000</pubDate>
+    <description>Testámos um modelo de decisão barato como filtro de custos nos workflows. A medição inicial apontava para 22 % do gasto, mas a conta real mostrou que cobria...</description>
+  </item>
+  <item>
     <title>Compilar não é prova: 4 regras de pipeline que mudaram o dev</title>
     <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/compilar-nao-e-prova-4-regras-de-pipeline-que-mudaram-o-dev.html</link>
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/compilar-nao-e-prova-4-regras-de-pipeline-que-mudaram-o-dev.html</guid>
@@ -128,19 +142,5 @@
     <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/drenagem-do-gateway-antes-de-reiniciar-sem-perder-trabalho.html</guid>
     <pubDate>Wed, 22 Jul 2026 10:32:33 +0100</pubDate>
     <description>Padrão para a porta 8790 recusar entradas novas (503) e acabar o que está em curso durante restarts. Script, ciclo completo e porquê cura a queda do telemóvel na...</description>
-  </item>
-  <item>
-    <title>Contratos de conclusão: declarar o que é ‘feito’ antes de agir</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/contratos-de-conclusao-declarar-o-que-e-feito-antes-de-agir.html</guid>
-    <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
-    <description>Como a fila /trabalho/* do Kraken OS exige um contrato explícito com campos de pronto, provas e limites antes de gastar ciclos em agentes.</description>
-  </item>
-  <item>
-    <title>Como travamos o gasto do modelo antes de perguntar ao agente</title>
-    <link>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html</link>
-    <guid>https://luisacmarques2013-pixel.github.io/gravurak/posts/como-travamos-o-gasto-do-modelo-antes-de-perguntar-ao-agente.html</guid>
-    <pubDate>Tue, 21 Jul 2026 10:33:22 +0100</pubDate>
-    <description>O Agente da Montra ignora a pergunta se já foi respondida ou se excedeu os baldes de 15/h e 30/d. Assim evitamos faturas surpresa sem perder funcionalidade.</description>
   </item>
 </channel></rss>

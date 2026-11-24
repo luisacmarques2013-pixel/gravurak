@@ -1,5 +1,5 @@
 {
- "total": 38,
+ "total": 40,
  "projetos": [
   {
    "t": "Confere: cada movimento com o seu documento",
@@ -25,6 +25,20 @@
   }
  ],
  "posts": [
+  {
+   "t": "Mover gigabytes sem quebrar venvs e atalhos",
+   "d": "Como migramos 119 GB entre discos num Windows doméstico, mantivemos venvs, git e atalhos a funcionar e evitámos apagar renders noutro projeto.",
+   "m": "2026-11-24",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/mover-gigabytes-sem-quebrar-venvs-e-atalhos.html",
+   "pilar": "bastidores"
+  },
+  {
+   "t": "Por que desistimos de um cetico barato para poupar tokens",
+   "d": "Testámos um modelo de decisão barato como filtro de custos nos workflows. A medição inicial apontava para 22 % do gasto, mas a conta real mostrou que cobria...",
+   "m": "2026-11-24",
+   "u": "https://luisacmarques2013-pixel.github.io/gravurak/posts/por-que-desistimos-de-um-cetico-barato-para-poupar-tokens.html",
+   "pilar": "agentes"
+  },
   {
    "t": "Compilar não é prova: 4 regras de pipeline que mudaram o dev",
    "d": "Descubra como quatro regras de pipeline e um agente de revisão eliminaram bugs de fecho. Aprenda a provar que o código funciona antes de o fechar.",
